@@ -1,0 +1,16 @@
+csvファイル出力
+http://scene-live.com/page.php?page=23
+https://qiita.com/Khigashiguchi/items/7782e81ccee8386bbc0b
+https://jehupc.exblog.jp/tags/%E5%85%A8%E9%8A%80%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88/
+
+【PHP】カタカナを、全銀フォーマットに対応した文字列に変換
+https://qiita.com/nwsoyogi/items/d01e4122667b2d1ab4ad
+
+LIKE '%[^a-zA-Z0-9 ()./\｢｣ｱ-ﾟ-]%'
+
+「ｦ」はなくていいのでしょうか？
+「ｦ」も使える文字であれば次のようになります。
+
+
+LIKE '%[^a-zA-Z0-9 ()./\｢｣ｦ-ﾟ-]%'
+
