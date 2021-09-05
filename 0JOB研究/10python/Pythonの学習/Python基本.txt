@@ -1,0 +1,231 @@
+Pythonの学習
+URL：https://algorithm.joho.info/programming/python/sample-code-py/
+
+◆バイナリモードで読み書き
+文字列を.encode()をしないとエラーになる
+.encode()にてstrをbytes型に変換する
+
+f = open('test.dat', 'wb') # バイナリモードでファイルに書き込み
+str="saver"
+
+f.write(str.encode()) # \n (LF)で保存される
+f.close()
+
+f = open('test.dat', 'rb') # バイナリモードでファイルを読み込み（開く）
+data = f.read()
+f.close() 
+print(data) # saver
+
+
+◆BASE64でファイルのエンコード・デコード
+モードの違い、弟コード方法の違いなどを修正
+1)エンコード
+# -*- coding: utf-8 -*-
+import base64
+
+file_path = "input.png"
+
+# ファイルを開く
+with open(file_path, "rb") as f:
+    data = f.read()
+
+# b64でエンコード
+encode =base64.b64encode(data)     
+
+# エンコードしたデータを保存
+with open(file_path + ".b64", "wb") as f:
+    f.write(encode)
+
+
+2)デコード
+# -*- coding: utf-8 -*-
+import base64
+
+b64_path = "input.png.b64"
+file_path = "input2.png"
+
+# ファイルを開く
+with open(b64_path, "rb") as f:
+    data = f.read()
+
+# b64でデコード     
+dencode = base64.b64decode(data)
+
+# デコードしたデータを保存
+with open(file_path, "wb") as f:
+    f.write(dencode)
+
+
+◆XMLファイルの読み込み
+# -*- coding: utf-8 -*-
+import xml.etree.ElementTree as ET 
+
+# XMLファイルを解析
+tree = ET.parse('sports.xml') 
+
+# XMLを取得
+root = tree.getroot()
+
+# 要素「name」のデータを1つずつ取得
+for name in root.iter('name'):
+    print(name.text)
+
+print('***********')
+
+# 配列でデータを1つずつ取得
+print(root[0][0].text)
+print(root[0][1].text)
+print(root[1][0].text)
+print(root[1][1].text)
+
+
+# 要素「name」のデータを1つずつ取得
+for name in root.iter('name'):
+    if name.text == 'サッカー':
+        name.text = 'フットボール'
+
+# XMLファイル書き込み
+tree.write('sports1.xml', encoding='UTF-8')
+
+# XMLファイルを解析
+tree = ET.parse('sports1.xml') 
+
+# XMLを取得
+root = tree.getroot()
+
+# 要素「name」のデータを1つずつ取得
+for name in root.iter('name'):
+    print(name.text)
+
+
+◆CSVファイルの書き込み
+参考URL：https://note.nkmk.me/python-csv-reader-writer/
+
+# -*- coding: utf-8 -*-
+import csv
+
+with open('data.csv', 'w', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow([0, 1, 2])
+    writer.writerow(['a', 'b', 'c'])
+
+with open('data.csv') as f:
+    print(f.read())
+# 0,1,2
+# a,b,c
+
+l = [[11, 12, 13, 14], [21, 22, 23, 24], [31, 32, 33, 34]]
+print(l)
+# [[11, 12, 13, 14], [21, 22, 23, 24], [31, 32, 33, 34]]
+
+with open('data1.csv', 'w', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerows(l)
+
+with open('data1.csv') as f:
+    print(f.read())
+# 11,12,13,14
+# 21,22,23,24
+# 31,32,33,34
+
+with open('data.csv', 'a', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(['X', 'Y', 'Z'])
+
+with open('data.csv') as f:
+    print(f.read())
+# 0,1,2
+# a,b,c
+# X,Y,Z
+
+
+# -*- coding: utf-8 -*-
+import csv
+
+l = [[11, 12, 13, 14], [21, 22, 23, 24], [31, 32, 33, 34]]
+print(l)
+# [[11, 12, 13, 14], [21, 22, 23, 24], [31, 32, 33, 34]]
+
+header = ['', '列①', '列②', '列③', '列④']
+index = ['ONE', 'TWO', 'THREE']
+
+with open('data3.csv', 'w', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(header)
+    for i, row in zip(index, l):
+        writer.writerow([i] + row)
+
+with open('data3.csv', newline='') as f:
+    print(f.read())
+# ,a,b,c,d
+# ONE,11,12,13,14
+# TWO,21,22,23,24
+# THREE,31,32,33,34
+
+辞書を書き込み: csv.DictWriter
+# -*- coding: utf-8 -*-
+import csv
+
+d1 = {'a': 1, 'b': 2, 'c': 3}
+d2 = {'a': 10, 'c': 30}
+
+with open('data4.csv', 'w', newline='') as f:
+    writer = csv.DictWriter(f, ['a', 'b', 'c'])
+    writer.writeheader()
+    writer.writerow(d1)
+    writer.writerow(d2)
+
+with open('data4.csv', newline='') as f:
+    print(f.read())
+# a,b,c
+# 1,2,3
+# 10,,30
+
+
+with open('data4.csv', 'w', newline='') as f:
+    writer = csv.DictWriter(f, ['a', 'b', 'c'])
+    writer.writeheader()
+    writer.writerows([d1, d2])
+
+with open('data4.csv', newline='') as f:
+    print(f.read())
+# a,b,c
+# 1,2,3
+# 10,,30
+
+欠損値
+# -*- coding: utf-8 -*-
+import csv
+
+with open('data5.csv', 'w', newline='') as f:
+    writer = csv.DictWriter(f, ['a', 'c'], extrasaction='ignore')
+    writer.writeheader()
+    writer.writerows([d1, d2])
+
+with open('data5.csv', newline='') as f:
+    print(f.read())
+# a,c
+# 1,3
+# 10,30
+
+◆JSON
+URL：https://note.nkmk.me/python-json-load-dump/
+
+pandasを利用したほうが良い
+
+import json
+from collections import OrderedDict
+import pprint
+
+
+
+
+
+
+
+
+
+
+
+
+

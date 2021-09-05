@@ -1,0 +1,267 @@
+C:\Python\project>pip list
+Package               Version   
+--------------------- ----------
+atomicwrites          1.3.0     
+attrs                 19.3.0    
+certifi               2019.11.28
+colorama              0.4.3     
+cycler                0.10.0    
+importlib-metadata    1.3.0     
+joblib                0.14.1    
+kiwisolver            1.1.0     
+logilab-common        1.5.2
+matplotlib            3.1.2
+more-itertools        8.0.2     
+mysqlclient           1.4.6
+numpy                 1.18.1
+opencv-contrib-python 4.1.2.30
+opencv-python         4.1.2.30  
+packaging             19.2
+pandas                0.25.3
+pip                   19.3.1
+pipenv                2018.11.26
+pluggy                0.13.1
+py                    1.8.0
+PyMySQL               0.9.3
+pyparsing             2.4.5
+pytest                5.3.2
+python-dateutil       2.8.1
+pytz                  2019.3
+scikit-learn          0.22.1
+scipy                 1.4.1
+setuptools            41.2.0
+six                   1.13.0
+sklearn               0.0
+virtualenv            16.7.8
+virtualenv-clone      0.5.3
+wcwidth               0.1.7
+xlrd                  1.2.0
+xlwt                  1.3.0
+zipp                  0.6.0
+
+C:\Python\project>
+
+
+################################################
+pip install tensorflow
+pip install tensorflow-gpu
+pip install keras
+pip install pydot
+
+nvcuda.dllをダウンロードをし、
+C:\Windows\System32 に配置
+
+GPUに対応していない
+################################################
+
+
+from keras.datasets import mnist
+
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+
+#---------------------------
+#次の一行を変更してください
+print(X_train.shape, y_train.shape, X_test.shape, y_test.shape)       
+#---------------------------
+
+
+////////////////////////////////////////////
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+from keras.utils.vis_utils import plot_model
+from keras.utils.np_utils import to_categorical
+import matplotlib.pyplot as plt
+
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+
+X_train = X_train.reshape(X_train.shape[0], 784)[:6000]
+X_test = X_test.reshape(X_test.shape[0], 784)[:1000]
+y_train = to_categorical(y_train)[:6000]
+y_test = to_categorical(y_test)[:1000]
+
+model = Sequential()
+# 入力ユニット数は 784、1つ目の全結合層の出力ユニット数は 256 です
+model.add(Dense(256, input_dim=784))
+model.add(Activation("sigmoid"))
+
+# 2つ目の全結合層の出力ユニット数は 128 です
+# ---------------------------
+# ここにコードを記述してください
+model.add(Dense(128))
+model.add(Activation("relu"))
+# ---------------------------
+
+# 3つ目の全結合層（出力層）の出力ユニット数は 10 です
+model.add(Dense(10))
+model.add(Activation("softmax"))
+
+model.compile(optimizer="sgd", loss="categorical_crossentropy", metrics=["accuracy"])
+
+# モデル構造の出力を出力します
+plot_model(model, "model125.png", show_layer_names=False)
+# モデル構造を可視化します
+image = plt.imread("model125.png")
+plt.figure(dpi=150)
+plt.imshow(image)
+plt.show()
+
+/////////////////////////////
+from keras.datasets import mnist
+from keras.layers import Activation, Dense
+from keras.models import Sequential
+from keras import optimizers
+from keras.utils.np_utils import to_categorical
+import matplotlib.pyplot as plt
+
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+
+X_train = X_train.reshape(X_train.shape[0], 784)[:6000]
+X_test = X_test.reshape(X_test.shape[0], 784)[:1000]
+y_train = to_categorical(y_train)[:6000]
+y_test = to_categorical(y_test)[:1000]
+
+model = Sequential()
+model.add(Dense(256, input_dim=784))
+model.add(Activation("sigmoid"))
+model.add(Dense(128))
+model.add(Activation("sigmoid"))
+model.add(Dense(10))
+model.add(Activation("softmax"))
+
+model.compile(optimizer="sgd", loss="categorical_crossentropy", metrics=["acc"]) #accuracy
+# ---------------------------
+# ここにコードを記述してください
+history = model.fit(X_train, y_train, verbose=1, epochs=5)
+# ---------------------------
+#acc、val_accのプロット
+plt.plot(history.history["acc"], label="acc", ls="-", marker="o")
+plt.ylabel("accuracy")
+plt.xlabel("epoch")
+plt.legend(loc="best")
+plt.show()
+
+////////////////////////////////////////////////////////////////
+import numpy as np
+import matplotlib.pyplot as plt
+from keras.datasets import mnist
+from keras.layers import Activation, Dense, Dropout
+from keras.models import Sequential, load_model
+from keras import optimizers
+from keras.utils.np_utils import to_categorical
+
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+
+X_train = X_train.reshape(X_train.shape[0], 784)[:6000]
+X_test = X_test.reshape(X_test.shape[0], 784)[:1000]
+y_train = to_categorical(y_train)[:6000]
+y_test = to_categorical(y_test)[:1000]
+
+model = Sequential()
+model.add(Dense(256, input_dim=784))
+model.add(Activation("sigmoid"))
+model.add(Dense(128))
+model.add(Activation("sigmoid"))
+model.add(Dense(10))
+model.add(Activation("softmax"))
+
+model.compile(optimizer="sgd", loss="categorical_crossentropy", metrics=["accuracy"])
+
+model.fit(X_train, y_train)
+
+# ---------------------------
+# ここにコードを記述してください
+score = model.evaluate(X_test, y_test, verbose=1)
+# ---------------------------
+print("evaluate loss: {0[0]}\nevaluate acc: {0[1]}".format(score))
+
+///////////////////////////////
+import numpy as np
+import matplotlib.pyplot as plt
+from keras.datasets import mnist
+from keras.layers import Activation, Dense
+from keras.models import Sequential, load_model
+from keras.utils.np_utils import to_categorical
+
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+
+X_train = X_train.reshape(X_train.shape[0], 784)[:6000]
+X_test = X_test.reshape(X_test.shape[0], 784)[:1000]
+y_train = to_categorical(y_train)[:6000]
+y_test = to_categorical(y_test)[:1000]
+
+model = Sequential()
+model.add(Dense(256, input_dim=784))
+model.add(Activation("sigmoid"))
+model.add(Dense(128))
+model.add(Activation("sigmoid"))
+model.add(Dense(10))
+model.add(Activation("softmax"))
+
+model.compile(optimizer="sgd", loss="categorical_crossentropy", metrics=["accuracy"])
+
+model.fit(X_train, y_train, verbose=1)
+
+score = model.evaluate(X_test, y_test, verbose=0)
+print("evaluate loss: {0[0]}\nevaluate acc: {0[1]}".format(score))
+
+# テストデータの最初の10枚を表示します
+for i in range(10):
+    plt.subplot(1, 10, i+1)
+    plt.imshow(X_test[i].reshape((28,28)), "gray")
+
+plt.show()
+
+# X_testの最初の10枚の予測されたラベルを表示しましょう
+# --------------------------
+# ここにコードを記述してください
+pred = np.argmax(model.predict(X_test[0:10]), axis=1)
+print(pred)
+# --------------------------
+
+///////////////////////////////////
+import numpy as np
+import matplotlib.pyplot as plt
+from keras.datasets import mnist
+from keras.layers import Activation, Dense
+from keras.models import Sequential, load_model
+from keras.utils.np_utils import to_categorical
+%matplotlib inline
+
+# データセットを読み込みます
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+
+X_train = X_train.reshape(X_train.shape[0], 784)[:10000]
+X_test = X_test.reshape(X_test.shape[0], 784)[:1000]
+y_train = to_categorical(y_train)[:10000]
+y_test = to_categorical(y_test)[:1000]
+
+# 1.モデルを生成します
+model = Sequential()
+model.add(Dense(256, input_dim=784))
+model.add(Activation("sigmoid"))
+model.add(Dense(128))
+model.add(Activation("sigmoid"))
+model.add(Dense(10))
+model.add(Activation("softmax"))
+
+model.compile(optimizer="sgd", loss="categorical_crossentropy", metrics=["accuracy"])
+
+# 2. 学習させます
+model.fit(X_train, y_train, verbose=1)
+
+score = model.evaluate(X_test, y_test, verbose=0)
+print("evaluate loss: {0[0]}\nevaluate acc: {0[1]}".format(score))
+
+for i in range(10):
+    plt.subplot(1, 10, i+1)
+    plt.imshow(X_test[i].reshape((28,28)), "gray")
+
+plt.show()
+
+# 3. モデルによる分類を行います
+pred = np.argmax(model.predict(X_test[0:10]), axis=1)
+print(pred)
+
+
+

@@ -1,0 +1,210 @@
+>node -v
+v8.11.1
+
+>npm --version
+5.6.0
+
+
+   ╭─────────────────────────────────────╮
+   │                                     │
+   │   Update available 5.6.0 → 6.3.0    │
+   │       Run npm i npm to update       │
+   │                                     │
+   ╰─────────────────────────────────────╯
+
+
+>npm i npm
+
++ npm@6.3.0
+added 396 packages in 77.547s
+
+>npm install -g @angular/cli
+C:\Users\y_aoy\AppData\Roaming\npm\ng -> C:\Users\y_aoy\AppData\Roaming\npm\node_modules\@angular\cli\bin\ng
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules\@angular\cli\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ @angular/cli@6.1.2
+added 243 packages in 46.489s
+
+>ng version
+
+     _                      _                 ____ _     ___
+    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+ /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                |___/
+
+
+Angular CLI: 6.1.2
+Node: 8.11.1
+OS: win32 x64
+Angular:
+...
+
+Package                      Version
+------------------------------------------------------
+@angular-devkit/architect    0.7.2
+@angular-devkit/core         0.7.2
+@angular-devkit/schematics   0.7.2
+@schematics/angular          0.7.2
+@schematics/update           0.7.2
+rxjs                         6.2.2
+typescript                   2.7.2
+
+>cd C:\xampp\htdocs
+>ng new test501
+CREATE test501/angular.json (3557 bytes)
+CREATE test501/package.json (1312 bytes)
+CREATE test501/README.md (1024 bytes)
+CREATE test501/tsconfig.json (408 bytes)
+CREATE test501/tslint.json (2805 bytes)
+CREATE test501/.editorconfig (245 bytes)
+CREATE test501/.gitignore (503 bytes)
+CREATE test501/src/favicon.ico (5430 bytes)
+CREATE test501/src/index.html (294 bytes)
+CREATE test501/src/main.ts (370 bytes)
+CREATE test501/src/polyfills.ts (3194 bytes)
+CREATE test501/src/test.ts (642 bytes)
+CREATE test501/src/styles.css (80 bytes)
+CREATE test501/src/browserslist (375 bytes)
+CREATE test501/src/karma.conf.js (964 bytes)
+CREATE test501/src/tsconfig.app.json (170 bytes)
+CREATE test501/src/tsconfig.spec.json (256 bytes)
+CREATE test501/src/tslint.json (314 bytes)
+CREATE test501/src/assets/.gitkeep (0 bytes)
+CREATE test501/src/environments/environment.prod.ts (51 bytes)
+CREATE test501/src/environments/environment.ts (631 bytes)
+CREATE test501/src/app/app.module.ts (314 bytes)
+CREATE test501/src/app/app.component.html (1141 bytes)
+CREATE test501/src/app/app.component.spec.ts (998 bytes)
+CREATE test501/src/app/app.component.ts (211 bytes)
+CREATE test501/src/app/app.component.css (0 bytes)
+CREATE test501/e2e/protractor.conf.js (752 bytes)
+CREATE test501/e2e/tsconfig.e2e.json (213 bytes)
+CREATE test501/e2e/src/app.e2e-spec.ts (303 bytes)
+CREATE test501/e2e/src/app.po.ts (208 bytes)
+npm WARN deprecated istanbul-lib-hook@1.2.1: 1.2.0 should have been a major version bump
+npm WARN notice [SECURITY] ws has the following vulnerability: 1 high. Go here for more details: https://nodesecurity.io/advisories?search=ws&version=1.1.2 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+npm WARN notice [SECURITY] debug has the following vulnerability: 1 low. Go here for more details: https://nodesecurity.io/advisories?search=debug&version=2.3.3 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+npm WARN notice [SECURITY] debug has the following vulnerability: 1 low. Go here for more details: https://nodesecurity.io/advisories?search=debug&version=2.3.3 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+npm WARN notice [SECURITY] parsejson has the following vulnerability: 1 high. Go here for more details: https://nodesecurity.io/advisories?search=parsejson&version=0.0.3 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+npm WARN notice [SECURITY] lodash has the following vulnerability: 1 low. Go here for more details: https://nodesecurity.io/advisories?search=lodash&version=3.10.1 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+
+> node-sass@4.9.2 install C:\xampp\htdocs\test501\node_modules\node-sass
+> node scripts/install.js
+
+Downloading binary from https://github.com/sass/node-sass/releases/download/v4.9.2/win32-x64-57_binding.node
+Download complete  ] - :
+Binary saved to C:\xampp\htdocs\test501\node_modules\node-sass\vendor\win32-x64-57\binding.node
+Caching binary to C:\Users\y_aoy\AppData\Roaming\npm-cache\node-sass\4.9.2\win32-x64-57_binding.node
+
+> node-sass@4.9.2 postinstall C:\xampp\htdocs\test501\node_modules\node-sass
+> node scripts/build.js
+
+Binary found at C:\xampp\htdocs\test501\node_modules\node-sass\vendor\win32-x64-57\binding.node
+Testing binary
+Binary is fine
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+added 1104 packages in 436.277s
+warning: LF will be replaced by CRLF in .editorconfig.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in angular.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in e2e/protractor.conf.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in e2e/src/app.e2e-spec.ts.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in e2e/src/app.po.ts.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in e2e/tsconfig.e2e.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in package-lock.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/app/app.component.html.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/app/app.component.spec.ts.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/app/app.component.ts.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/app/app.module.ts.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/browserslist.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/environments/environment.prod.ts.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/environments/environment.ts.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/index.html.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/karma.conf.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/main.ts.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/polyfills.ts.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/styles.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/test.ts.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/tsconfig.app.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/tsconfig.spec.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/tslint.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in tsconfig.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in tslint.json.
+The file will have its original line endings in your working directory.
+    Successfully initialized git.
+
+>cd test501
+
+>ng serve --open
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+Date: 2018-08-04T22:35:44.233Z
+Hash: 16ecd624e012fa7f5d26
+Time: 9014ms
+chunk {main} main.js, main.js.map (main) 10.7 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 227 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 5.22 kB [entry] [rendered]
+chunk {styles} styles.js, styles.js.map (styles) 15.6 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 3.27 MB [initial] [rendered]
+i ｢wdm｣: Compiled successfully.
+
+◆ソース修正
+◆/src/index.html
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Test501</title>
+  <base href="/">
+
+◆/src/app/app.component.ts
+export class AppComponent {
+  //title = 'test501';
+    title = '青山システムズテスト';
+}
+
+◆/src/app/app.component.css
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+チュートリアルに変更
+https://angular.jp/tutorial/toh-pt0
+
+>ng generate component heroes
+

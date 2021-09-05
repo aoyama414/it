@@ -1,0 +1,206 @@
+
+
+1)仮想環境の構築
+	C:\Python>mkdir ad-dj
+	C:\Python>cd ad-dj
+	C:\Python\ad-dj>pip install virtualenv
+	Collecting virtualenv
+	  Downloading virtualenv-20.0.35-py2.py3-none-any.whl (4.9 MB)
+	     |████████████████████████████████| 4.9 MB 34 kB/s
+	Collecting filelock<4,>=3.0.0
+	  Downloading filelock-3.0.12-py3-none-any.whl (7.6 kB)
+	Collecting appdirs<2,>=1.4.3
+	  Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+	Requirement already satisfied: six<2,>=1.9.0 in c:\users\y_aoy\appdata\roaming\python\python38\site-packages (from virtualenv) (1.15.0)       
+	Collecting distlib<1,>=0.3.1
+	  Downloading distlib-0.3.1-py2.py3-none-any.whl (335 kB)
+	     |████████████████████████████████| 335 kB 6.8 MB/s
+	Installing collected packages: filelock, appdirs, distlib, virtualenv
+	Successfully installed appdirs-1.4.4 distlib-0.3.1 filelock-3.0.12 virtualenv-20.0.35
+
+2)以下のコマンドを実行して仮想環境にする
+	C:\Python\ad-dj>python -m venv env01
+	C:\Python\ad-dj>.\env01\Scripts\activate
+	(env01) C:\Python\ad-dj>python -m pip install --upgrade pip
+	Collecting pip
+	  Using cached pip-20.2.3-py2.py3-none-any.whl (1.5 MB)
+	Installing collected packages: pip
+	  Attempting uninstall: pip
+	    Found existing installation: pip 20.1.1
+	    Uninstalling pip-20.1.1:
+	      Successfully uninstalled pip-20.1.1
+	Successfully installed pip-20.2.3
+
+	(env01) C:\Python\ad-dj>pip install django
+	Collecting django
+	  Using cached Django-3.1.2-py3-none-any.whl (7.8 MB)
+	Collecting sqlparse>=0.2.2
+	  Using cached sqlparse-0.4.1-py3-none-any.whl (42 kB)
+	Collecting pytz
+	  Using cached pytz-2020.1-py2.py3-none-any.whl (510 kB)
+	Collecting asgiref~=3.2.10
+	  Using cached asgiref-3.2.10-py3-none-any.whl (19 kB)
+	Installing collected packages: sqlparse, pytz, asgiref, django
+	Successfully installed asgiref-3.2.10 django-3.1.2 pytz-2020.1 sqlparse-0.4.1
+
+	(env01) C:\Python\ad-dj>django-admin startproject aoyamadj .
+	
+	DB系
+	MySQL	mysqlclient（MySQL-Pythonをpython3に対応させたOSS。Djangoの推奨ドライバ）
+	(env01) C:\Python\ad-dj4>python -m pip install mysqlclient
+	Collecting mysqlclient
+	  Downloading mysqlclient-2.0.1-cp38-cp38-win_amd64.whl (269 kB)
+	     |████████████████████████████████| 269 kB 3.2 MB/s
+	Installing collected packages: mysqlclient
+	Successfully installed mysqlclient-2.0.1
+
+	setting.py
+	DATABASES = {
+	    # 'default': {
+	    #     'ENGINE': 'django.db.backends.sqlite3',
+	    #     'NAME': BASE_DIR / 'db.sqlite3',
+	    # }
+		    'default': {
+		        'ENGINE': 'django.db.backends.mysql',
+		        'NAME': 'djdb',  # 　作成したデータベース名
+		        'USER': 'root',  # ログインユーザー名
+		        'PASSWORD': 'Nktucw82/',  # 同上。そのパスワード
+		        # WARNINGS:
+		        # ?: (mysql.W002) MariaDB Strict Mode is not set for database connection 'default'
+		        #         HINT: MariaDB's Strict Mode fixes many data integrity problems in MariaDB, 
+		        # such as data truncation upon insertion, by escalating warnings into errors. 
+		        # It is strongly recommended you activate it. 
+		        # See: https://docs.djangoproject.com/en/3.1/ref/databases/#mysql-sql-mode
+		        # 
+		        # OPTIONSの追加でワーニングが消える
+		        'OPTIONS': {
+		            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+		        },
+		        # 'TEST': {
+		        #     'NAME': 'test_sample'
+		        # },
+		        'HOST': 'localhost',
+		        'PORT': '3306',
+			    }
+	}
+
+	# LANGUAGE_CODE = 'en-us'
+	LANGUAGE_CODE = 'ja'
+
+	# TIME_ZONE = 'UTC'
+	TIME_ZONE = 'Asia/Tokyo'
+	
+	◆DjangoのAdminとauthを直接変更
+	idを数字からuuidに変更
+	django.contrib.auth.migrations
+	     0001_initial.py変更
+	     	下記追加
+			import uuid as uuid_lib
+
+
+			class MyUUIDField(models.UUIDField):
+			    def prepare_value(self, value):
+			        if isinstance(value, uuid_lib.UUID):
+			            return value.hex
+			        return value	     
+	     
+	     	下記修正
+	        migrations.CreateModel(
+	            name='User',
+	            fields=[
+	                # idをuuidに変更
+	                # ('id', models.AutoField(
+	                #     serialize=False,
+	                #     auto_created=True,
+	                #     primary_key=True)),
+	                ('id', MyUUIDField(
+	                    verbose_name='id',
+	                    default=uuid_lib.uuid4,
+	                    auto_created=True,
+	                    primary_key=True,
+	                    editable=False)),
+
+		0003_alter_user_email_max_length.py
+			下記を修正
+		    # email変更
+		    operations = [
+		        migrations.AlterField(
+		            model_name='user',
+		            name='email',
+		            field=models.EmailField(
+		                max_length=254,
+		                verbose_name='email address',
+		                unique=True,
+		                error_messages={
+		                    'unique': "A user with that email already exists.",
+		                },
+		            ),
+		        ),
+
+	django.contrib.auth.models.py
+		追加
+		import uuid as uuid_lib
+		
+		class AbstractUser(AbstractBaseUser, PermissionsMixin):
+		    """
+		    An abstract base class implementing a fully featured User model with
+		    admin-compliant permissions.
+
+		    Username and password are required. Other fields are optional.
+		    """
+		    id = models.UUIDField(primary_key=True, default=uuid_lib.uuid4, editable=False)
+
+
+	DB作成
+	(env01) C:\Python\ad-dj>python manage.py migrate
+	Operations to perform:
+	  Apply all migrations: admin, auth, contenttypes, sessions
+	Running migrations:
+	  Applying contenttypes.0001_initial... OK
+	  Applying auth.0001_initial... OK
+	  Applying admin.0001_initial... OK
+	  Applying admin.0002_logentry_remove_auto_add... OK
+	  Applying admin.0003_logentry_add_action_flag_choices... OK
+	  Applying contenttypes.0002_remove_content_type_name... OK
+	  Applying auth.0002_alter_permission_name_max_length... OK
+	  Applying auth.0003_alter_user_email_max_length... OK
+	  Applying auth.0004_alter_user_username_opts... OK
+	  Applying auth.0005_alter_user_last_login_null... OK
+	  Applying auth.0006_require_contenttypes_0002... OK
+	  Applying auth.0007_alter_validators_add_error_messages... OK
+	  Applying auth.0008_alter_user_username_max_length... OK
+	  Applying auth.0009_alter_user_last_name_max_length... OK
+	  Applying auth.0010_alter_group_name_max_length... OK
+	  Applying auth.0011_update_proxy_permissions... OK
+	  Applying auth.0012_alter_user_first_name_max_length... OK
+	  Applying sessions.0001_initial... OK
+
+	ユーザの作成
+	(env01) C:\Python\ad-dj>python manage.py createsuperuser
+	ユーザー名 (leave blank to use 'y_aoy'): aoyama
+	メールアドレス: aoyama414@gmail.com
+	Password:nktucw82
+	Password (again):nktucw82
+	Superuser created successfully.
+
+	bootstrap4
+	(env01) C:\Python\ad-dj3>python -m pip install django-bootstrap4
+	Collecting django-bootstrap4
+	  Using cached django_bootstrap4-2.3.1-py3-none-any.whl (24 kB)
+	Collecting beautifulsoup4<5.0.0,>=4.8.0
+	  Using cached beautifulsoup4-4.9.3-py3-none-any.whl (115 kB)
+	Requirement already satisfied: django<4.0,>=2.2 in c:\python\ad-dj3\env01\lib\site-packages (from django-bootstrap4)	 (3.1.2)
+	Collecting soupsieve>1.2; python_version >= "3.0"
+	  Using cached soupsieve-2.0.1-py3-none-any.whl (32 kB)
+	Requirement already satisfied: pytz in c:\python\ad-dj3\env01\lib\site-packages (from django<4.0,>=2.2->django-boots	trap4) (2020.1)
+	Requirement already satisfied: sqlparse>=0.2.2 in c:\python\ad-dj3\env01\lib\site-packages (from django<4.0,>=2.2->d	jango-bootstrap4) (0.4.1)
+	Requirement already satisfied: asgiref~=3.2.10 in c:\python\ad-dj3\env01\lib\site-packages (from django<4.0,>=2.2->d	jango-bootstrap4) (3.2.10)
+	Installing collected packages: soupsieve, beautifulsoup4, django-bootstrap4
+	Successfully installed beautifulsoup4-4.9.3 django-bootstrap4-2.3.1 soupsieve-2.0.1
+
+
+	■仮想環境の終了
+	(env01) C:\Python\ad-dj4>deactivate
+	C:\Python\ad-dj4>
+
+

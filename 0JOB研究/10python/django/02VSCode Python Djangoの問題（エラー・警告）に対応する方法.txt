@@ -1,0 +1,19 @@
+VSCode Python Djangoの問題（エラー・警告）に対応する方法
+
+
+問題
+例えば、django.dbのmodelsクラスなどはDjangoのクラスのため、modelsクラスのobjectsを参照しようとすると、問題として検知されてしまいます。
+
+Class '*******' has no 'objects' memberpylint(no-member)
+pylint-djangoをインストールする
+コマンドプロンプトやbashから以下のコマンドでインストールします。
+
+pip install pylint-django
+VSCodeのsetting.jsonに読み込み設定を追加する
+VSCodeの設定ファイルを開き、以下の設定値を追加します。
+
+"python.linting.pylintArgs": [
+    "--load-plugins=pylint_django",
+]
+
+

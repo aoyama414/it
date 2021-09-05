@@ -1,0 +1,154 @@
+ニューラルネットワークモデルはいろいろな場面に適用させることができる
+→ハイパーパラメータ―
+
+/////////////////
+import numpy as np
+import matplotlib.pyplot as plt
+from keras.datasets import mnist
+from keras.layers import Activation, Dense, Dropout
+from keras.models import Sequential, load_model
+from keras import optimizers
+from keras.utils.np_utils import to_categorical
+
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+
+X_train = X_train.reshape(X_train.shape[0], 784)[:6000]
+X_test = X_test.reshape(X_test.shape[0], 784)[:1000]
+y_train = to_categorical(y_train)[:6000]
+y_test = to_categorical(y_test)[:1000]
+
+model = Sequential()
+model.add(Dense(256, input_dim=784))
+# ハイパーパラメータ：活性化関数
+model.add(Activation("sigmoid"))
+# ハイパーパラメータ：隠れ層の数、隠れ層のチャンネル数
+model.add(Dense(128))
+model.add(Activation("sigmoid"))
+# ハイパーパラメータ：ドロップアウトする割合（rate）
+model.add(Dropout(rate=0.5))
+model.add(Dense(10))
+model.add(Activation("softmax"))
+
+# ハイパーパラメータ：学習率（Ir）
+sgd = optimizers.SGD(lr=0.01)
+
+# ハイパーパラメータ：最適化関数（optimizer）
+# ハイパーパラメータ：誤差関数（loss）
+model.compile(optimizer=sgd, loss="categorical_crossentropy", metrics=["accuracy"])
+
+# ハイパーパラメータ：バッチサイズ（batch_size）
+# ハイパーパラメータ：エポック数（epochs）
+model.fit(X_train, y_train, batch_size=32, epochs=10, verbose=1)
+
+score = model.evaluate(X_test, y_test, verbose=0)
+print("evaluate loss: {0[0]}\nevaluate acc: {0[1]}".format(score))
+
+/////////////////
+◆ネットワーク構造
+隠れ層の数、隠れ層のユニット数は自由に決めることが可能
+
+import numpy as np
+import matplotlib.pyplot as plt
+from keras.datasets import mnist
+from keras.layers import Activation, Dense, Dropout
+from keras.models import Sequential, load_model
+from keras import optimizers
+from keras.utils.np_utils import to_categorical
+
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+
+X_train = X_train.reshape(X_train.shape[0], 784)[:6000]
+X_test = X_test.reshape(X_test.shape[0], 784)[:1000]
+y_train = to_categorical(y_train)[:6000]
+y_test = to_categorical(y_test)[:1000]
+
+model = Sequential()
+model.add(Dense(256, input_dim=784))
+model.add(Activation("sigmoid"))
+
+def funcA():
+    model.add(Dense(128))
+    model.add(Activation("sigmoid"))
+
+def funcB():
+    model.add(Dense(128))
+    model.add(Activation("sigmoid"))
+    model.add(Dense(128))
+    model.add(Activation("sigmoid"))
+    model.add(Dense(128))
+    model.add(Activation("sigmoid"))
+
+def funcC():
+    model.add(Dense(1568))
+    model.add(Activation("sigmoid"))
+
+# 2 つをコメントアウトしてください
+#---------------------------
+funcA()
+#funcB()
+#funcC()
+#---------------------------
+
+model.add(Dropout(rate=0.5))
+model.add(Dense(10))
+model.add(Activation("softmax"))
+
+sgd = optimizers.SGD(lr=0.1)
+
+model.compile(optimizer=sgd, loss="categorical_crossentropy", metrics=["accuracy"])
+
+model.fit(X_train, y_train, batch_size=32, epochs=3, verbose=1)
+
+score = model.evaluate(X_test, y_test, verbose=0)
+print("evaluate loss: {0[0]}\nevaluate acc: {0[1]}".format(score))
+
+////////////////////////////////
+◆ドロップアウト
+
+import numpy as np
+import matplotlib.pyplot as plt
+from keras.datasets import mnist
+from keras.layers import Activation, Dense, Dropout
+from keras.models import Sequential, load_model
+from keras import optimizers
+from keras.utils.np_utils import to_categorical
+
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+
+X_train = X_train.reshape(X_train.shape[0], 784)[:6000]
+X_test = X_test.reshape(X_test.shape[0], 784)[:1000]
+y_train = to_categorical(y_train)[:6000]
+y_test = to_categorical(y_test)[:1000]
+
+model = Sequential()
+model.add(Dense(256, input_dim=784))
+model.add(Activation("sigmoid"))
+model.add(Dense(128))
+model.add(Activation("sigmoid"))
+# ---------------------------
+# ここにコードを記述してください
+model.add(Dropout(rate=0.5))
+# ---------------------------
+model.add(Dense(10))
+model.add(Activation("softmax"))
+
+sgd = optimizers.SGD(lr=0.1)
+
+model.compile(optimizer=sgd, loss="categorical_crossentropy", metrics=["acc"])
+
+history = model.fit(X_train, y_train, batch_size=32, epochs=5, verbose=1, validation_data=(X_test, y_test))
+
+#acc、val_accのプロット
+plt.plot(history.history["acc"], label="acc", ls="-", marker="o")
+plt.plot(history.history["val_acc"], label="val_acc", ls="-", marker="x")
+plt.ylabel("accuracy")
+plt.xlabel("epoch")
+plt.legend(loc="best")
+plt.show()
+
+
+
+
+
+
+

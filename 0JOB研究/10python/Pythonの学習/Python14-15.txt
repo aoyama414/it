@@ -1,0 +1,230 @@
+◆リスト14.1
+import pandas as pd
+
+
+df = pd.read_csv("./data/wine.data", header=None)
+# カラムにそれぞれの数値が何を表しているかを追加します
+df.columns=["", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium","Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins","Color intensity", "Hue", "OD280/OD315 of diluted wines", "Proline"]
+
+print(df)
+
+◆リスト14-2
+import pandas as pd
+
+
+df = pd.read_csv("./data/iris.data", header=None)
+# カラムにそれぞれの数値が何を表しているかを追加します
+df.columns=["sepal length", "sepal width", "petal length", "petal width", "class"]
+
+print(df)
+
+◆リスト14-4
+import csv
+
+#with文を用いて実行します,
+with open("./out/csv0.csv", "w") as csvfile:
+    #writer()メソッドには引数としてここではcsvfileと改行コード（\n）を指定します,
+    writer = csv.writer(csvfile, lineterminator="\n")
+    #writerow（リスト）を用いて行を追加していきます
+    writer.writerow(["city", "year", "season"])
+    writer.writerow(["Nagano", 1998, "winter"])
+    writer.writerow(["Sydney", 2000, "summer"])
+    writer.writerow(["Salt Lake City", 2002, "winter"])
+    writer.writerow(["Athens", 2004, "summer"])
+    writer.writerow(["Torino", 2006, "winter"])
+    writer.writerow(["Beijing", 2008, "summer"])
+    writer.writerow(["Vancouver", 2010, "winter"])
+    writer.writerow(["London", 2012, "summer"])
+    writer.writerow(["Sochi", 2014, "winter"])
+    writer.writerow(["Rio de Janeiro", 2016, "summer"])
+
+◆リスト14-6
+import pandas as pd
+
+data = {
+"city": ["Nagano", "Sydney", "Salt Lake City", "Athens", "Torino", "Beijing", "Vancouver", "London", "Sochi", "Rio de Janeiro"],
+"year": [1998, 2000, 2002, 2004, 2006, 2008, 2010, 2012, 2014, 2016],
+"season": ["winter", "summer", "winter", "summer", "winter", "summer", "winter", "summer", "winter", "summer"]
+}
+
+df = pd.DataFrame(data)
+
+df.to_csv("./out/csv1.csv")
+
+◆リスト14-7
+import pandas as pd
+
+data = {"OS": ["Machintosh", "Windows", "Linux"],
+        "release": [1984, 1985, 1991],
+        "country": ["US", "US", ""]}
+# ここに解答を記述してください
+df = pd.DataFrame(data)
+df.to_csv("./out/OSlist.csv")
+
+◆リスト14-9
+import pandas as pd
+from pandas import Series, DataFrame
+
+attri_data1 = {"ID": ["100", "101", "102", "103", "104", 
+                      "106", "108", "110", "111", "113"],
+               "city": ["Tokyo", "Osaka", "Kyoto", "Hokkaido", 
+                        "Tokyo", "Tokyo", "Osaka", "Kyoto", 
+                        "Hokkaido", "Tokyo"],
+               "birth_year": [1990, 1989, 1992, 1997, 1982, 
+                              1991, 1988, 1990, 1995, 1981],
+               "name": ["Hiroshi", "Akiko", "Yuki", "Satoru", 
+                        "Steeve", "Mituru", "Aoi", "Tarou", 
+                        "Suguru", "Mitsuo"]}
+attri_data_frame1 = DataFrame(attri_data1)
+
+attri_data2 = {"ID": ["107", "109"],
+               "city": ["Sendai", "Nagoya"],
+               "birth_year": [1994, 1988]}
+attri_data_frame2 = DataFrame(attri_data2)
+# ここに解答を記述してください
+attri_data_frame1.append(attri_data_frame2).sort_values(
+    by="ID", ascending=True).reset_index(drop=True)
+
+
+◆リスト14-22
+import numpy as np
+from numpy import nan as NA
+import pandas as pd
+np.random.seed(0)
+
+sample_data_frame = pd.DataFrame(np.random.rand(10, 4))
+
+sample_data_frame.iloc[1, 0] = NA
+sample_data_frame.iloc[6:, 2] = NA
+
+# ここに解答を記述してください
+sample_data_frame.fillna(sample_data_frame.mean())
+
+
+◆リスト14-25
+import pandas as pd
+
+df = pd.read_csv("./data/wine.data", header=None)
+df.columns = ["", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids","Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "OD280/OD315 of diluted wines", "Proline"]
+
+# ここに解答を記述してください
+df["Magnesium"].mean()
+
+
+◆リスト 14-30
+import pandas as pd
+from pandas import DataFrame
+
+dupli_data = DataFrame({"col1":[1, 1, 2, 3, 4, 4, 6, 
+                                6, 7, 7, 7, 8, 9, 9]
+                       ,"col2":["a", "b", "b", "b", "c", 
+                                "c", "b", "b", "d", "d", 
+                                "c", "b", "c", "c"]})
+
+# ここに解答を記述してください
+dupli_data.duplicated() # 重複行はTrue
+dupli_data.drop_duplicates()
+
+
+◆リスト 14-35
+import pandas as pd
+from pandas import DataFrame
+
+attri_data1 = {"ID": ["100", "101", "102", "103", "104", 
+                      "106", "108", "110", "111", "113"]
+        ,"city": ["Tokyo", "Osaka", "Kyoto", "Hokkaido", 
+                  "Tokyo", "Tokyo", "Osaka", "Kyoto", 
+                  "Hokkaido", "Tokyo"]
+        ,"birth_year" :[1990, 1989, 1992, 1997, 1982, 
+                        1991, 1988, 1990, 1995, 1981]
+        ,"name" :["Hiroshi", "Akiko", "Yuki", "Satoru", 
+                  "Steeve", "Mituru", "Aoi", "Tarou", 
+                  "Suguru", "Mitsuo"]}
+attri_data_frame1 = DataFrame(attri_data1)
+
+# ここに解答を記述してください
+WE_map = {"Tokyo":"east"
+          ,"Hokkaido":"east"
+          ,"Osaka":"west"
+          ,"Kyoto":"west"}
+
+attri_data_frame1["WE"] = attri_data_frame1["city"].map(WE_map)
+
+attri_data_frame1
+
+◆リスト 14-42
+import pandas as pd
+from pandas import DataFrame
+
+attri_data1 = {"ID":[100,101,102,103,104,106,108,110,111,113]
+        ,"city":["Tokyo","Osaka","Kyoto","Hokkaido","Tokyo","Tokyo","Osaka","Kyoto","Hokkaido","Tokyo"]
+        ,"birth_year":[1990,1989,1992,1997,1982,1991,1988,1990,1995,1981]
+        ,"name":["Hiroshi","Akiko","Yuki","Satoru","Steeve","Mituru","Aoi","Tarou","Suguru","Mitsuo"]}
+attri_data_frame1 = DataFrame(attri_data1)
+
+# ここに解答を記述してください
+pd.cut(attri_data_frame1.ID, 2)
+
+
+########################################
+pip install opencv-python
+pip install opencv-contrib-python
+
+########################################
+
+◆リスト 15-2
+import numpy as np
+import cv2
+
+# 画像を読み込みます
+# 「cleansing_data」フォルダに sample.jpg が存在する時のコードです
+img = cv2.imread("./data/cleansing_data/sample.jpg")
+
+# sampleはウィンドウの名前です
+cv2.imshow("sample", img)
+cv2.waitKey(0)
+
+◆リスト 15-9
+import numpy as np
+import cv2
+
+img = cv2.imread("./data/cleansing_data/sample.jpg")
+
+# ここに解答を書いてください(1/10に縮小)
+my_img = cv2.resize(img, (img.shape[1] // 10, img.shape[0] // 10))
+
+cv2.imshow("sample", my_img)
+cv2.waitKey(0)
+
+◆リスト 15-11
+import numpy as np
+import cv2
+
+img = cv2.imread("./data/cleansing_data/sample.jpg")
+
+# 高さ、幅
+h, w, c = img.shape
+print(h, w, c)
+
+# warpAffine()関数を用いるのに必要な行列を作ります
+# 第一引数が回転の中心（ここでは画像の中心）です
+# 第二引数は回転角度（ここでは180度）です
+# 第三引数は倍率（ここでは0.5倍に拡大）です
+
+mat = cv2.getRotationMatrix2D(tuple(np.array(img.shape[:2]) / 2), 180, 0.5)
+
+# アフィン変換をします
+# 第一引数が変換したい画像です
+# 第二引数が上で生成した行列（mat）です
+# 第三引数がサイズです
+
+my_img = cv2.warpAffine(img, mat, img.shape[:2])
+
+my_img2 = cv2.resize(my_img, (my_img.shape[1] // 10, my_img.shape[0] // 10))
+
+cv2.imshow("sample", my_img2)
+cv2.waitKey(0)
+
+◆リスト 15-11
+
+

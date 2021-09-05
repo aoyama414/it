@@ -1,0 +1,1173 @@
+Microsoft Windows [Version 10.0.19042.867]
+(c) 2020 Microsoft Corporation. All rights reserved.
+
+C:\Symfony>composer self-update
+Updating to version 2.0.11 (stable channel).
+   Downloading (100%)
+Use composer self-update --rollback to return to version 1.8.5
+
+C:\Symfony>composer --version
+Composer version 2.0.11 2021-02-24 14:57:23
+
+C:\Symfony>composer create-project symfony/website-skeleton symfony01
+Creating a "symfony/website-skeleton" project at "./symfony01"
+Installing symfony/website-skeleton (v5.2.99)
+  - Downloading symfony/website-skeleton (v5.2.99)
+  - Installing symfony/website-skeleton (v5.2.99): Extracting archive
+Created project in C:\Symfony\symfony01
+Loading composer repositories with package information
+Updating dependencies
+Lock file operations: 1 install, 0 updates, 0 removals
+  - Locking symfony/flex (v1.12.2)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 1 install, 0 updates, 0 removals
+  - Downloading symfony/flex (v1.12.2)
+  - Installing symfony/flex (v1.12.2): Extracting archive
+
+Symfony operations: 1 recipe (dd17f70baf1c3f12e10fb7bd385f5340)
+  - Configuring symfony/flex (>=1.0): From github.com/symfony/recipes:master
+Loading composer repositories with package information
+Restricting packages listed in "symfony/symfony" to "5.2.*"
+Updating dependencies
+Lock file operations: 107 installs, 0 updates, 0 removals
+  - Locking composer/package-versions-deprecated (1.11.99.1)
+  - Locking doctrine/annotations (1.12.1)
+  - Locking doctrine/cache (1.10.2)
+  - Locking doctrine/collections (1.6.7)
+  - Locking doctrine/common (3.1.1)
+  - Locking doctrine/dbal (2.13.0)
+  - Locking doctrine/deprecations (v0.5.3)
+  - Locking doctrine/doctrine-bundle (2.3.0)
+  - Locking doctrine/doctrine-migrations-bundle (3.0.2)
+  - Locking doctrine/event-manager (1.1.1)
+  - Locking doctrine/inflector (2.0.3)
+  - Locking doctrine/instantiator (1.4.0)
+  - Locking doctrine/lexer (1.2.1)
+  - Locking doctrine/migrations (3.1.1)
+  - Locking doctrine/orm (2.8.2)
+  - Locking doctrine/persistence (2.1.0)
+  - Locking doctrine/sql-formatter (1.1.1)
+  - Locking egulias/email-validator (3.1.0)
+  - Locking friendsofphp/proxy-manager-lts (v1.0.3)
+  - Locking laminas/laminas-code (4.1.0)
+  - Locking laminas/laminas-eventmanager (3.3.1)
+  - Locking laminas/laminas-zendframework-bridge (1.2.0)
+  - Locking monolog/monolog (2.2.0)
+  - Locking nikic/php-parser (v4.10.4)
+  - Locking phpdocumentor/reflection-common (2.2.0)
+  - Locking phpdocumentor/reflection-docblock (5.2.2)
+  - Locking phpdocumentor/type-resolver (1.4.0)
+  - Locking psr/cache (1.0.1)
+  - Locking psr/container (1.1.1)
+  - Locking psr/event-dispatcher (1.0.0)
+  - Locking psr/link (1.0.0)
+  - Locking psr/log (1.1.3)
+  - Locking sensio/framework-extra-bundle (v5.6.1)
+  - Locking symfony/asset (v5.2.4)
+  - Locking symfony/browser-kit (v5.2.4)
+  - Locking symfony/cache (v5.2.6)
+  - Locking symfony/cache-contracts (v2.2.0)
+  - Locking symfony/config (v5.2.4)
+  - Locking symfony/console (v5.2.6)
+  - Locking symfony/css-selector (v5.2.4)
+  - Locking symfony/debug-bundle (v5.2.4)
+  - Locking symfony/debug-pack (v1.0.9)
+  - Locking symfony/dependency-injection (v5.2.6)
+  - Locking symfony/deprecation-contracts (v2.2.0)
+  - Locking symfony/doctrine-bridge (v5.2.6)
+  - Locking symfony/dom-crawler (v5.2.4)
+  - Locking symfony/dotenv (v5.2.4)
+  - Locking symfony/error-handler (v5.2.6)
+  - Locking symfony/event-dispatcher (v5.2.4)
+  - Locking symfony/event-dispatcher-contracts (v2.2.0)
+  - Locking symfony/expression-language (v5.2.4)
+  - Locking symfony/filesystem (v5.2.6)
+  - Locking symfony/finder (v5.2.4)
+  - Locking symfony/form (v5.2.6)
+  - Locking symfony/framework-bundle (v5.2.6)
+  - Locking symfony/http-client (v5.2.6)
+  - Locking symfony/http-client-contracts (v2.3.1)
+  - Locking symfony/http-foundation (v5.2.4)
+  - Locking symfony/http-kernel (v5.2.6)
+  - Locking symfony/intl (v5.2.4)
+  - Locking symfony/mailer (v5.2.6)
+  - Locking symfony/maker-bundle (v1.30.2)
+  - Locking symfony/mime (v5.2.6)
+  - Locking symfony/monolog-bridge (v5.2.5)
+  - Locking symfony/monolog-bundle (v3.6.0)
+  - Locking symfony/notifier (v5.2.4)
+  - Locking symfony/options-resolver (v5.2.4)
+  - Locking symfony/orm-pack (v2.1.0)
+  - Locking symfony/phpunit-bridge (v5.2.6)
+  - Locking symfony/polyfill-intl-grapheme (v1.22.1)
+  - Locking symfony/polyfill-intl-icu (v1.22.1)
+  - Locking symfony/polyfill-intl-idn (v1.22.1)
+  - Locking symfony/polyfill-intl-normalizer (v1.22.1)
+  - Locking symfony/polyfill-mbstring (v1.22.1)
+  - Locking symfony/polyfill-php73 (v1.22.1)
+  - Locking symfony/polyfill-php80 (v1.22.1)
+  - Locking symfony/process (v5.2.4)
+  - Locking symfony/profiler-pack (v1.0.5)
+  - Locking symfony/property-access (v5.2.4)
+  - Locking symfony/property-info (v5.2.4)
+  - Locking symfony/proxy-manager-bridge (v5.2.4)
+  - Locking symfony/routing (v5.2.6)
+  - Locking symfony/security-bundle (v5.2.6)
+  - Locking symfony/security-core (v5.2.6)
+  - Locking symfony/security-csrf (v5.2.4)
+  - Locking symfony/security-guard (v5.2.4)
+  - Locking symfony/security-http (v5.2.6)
+  - Locking symfony/serializer (v5.2.4)
+  - Locking symfony/serializer-pack (v1.0.4)
+  - Locking symfony/service-contracts (v2.2.0)
+  - Locking symfony/stopwatch (v5.2.4)
+  - Locking symfony/string (v5.2.6)
+  - Locking symfony/test-pack (v1.0.7)
+  - Locking symfony/translation (v5.2.6)
+  - Locking symfony/translation-contracts (v2.3.0)
+  - Locking symfony/twig-bridge (v5.2.6)
+  - Locking symfony/twig-bundle (v5.2.4)
+  - Locking symfony/twig-pack (v1.0.1)
+  - Locking symfony/validator (v5.2.6)
+  - Locking symfony/var-dumper (v5.2.6)
+  - Locking symfony/var-exporter (v5.2.4)
+  - Locking symfony/web-link (v5.2.5)
+  - Locking symfony/web-profiler-bundle (v5.2.6)
+  - Locking symfony/yaml (v5.2.5)
+  - Locking twig/extra-bundle (v3.3.0)
+  - Locking twig/twig (v3.3.0)
+  - Locking webmozart/assert (1.10.0)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 107 installs, 0 updates, 0 removals
+  - Downloading composer/package-versions-deprecated (1.11.99.1)
+  - Downloading doctrine/cache (1.10.2)
+  - Downloading doctrine/collections (1.6.7)
+  - Downloading doctrine/event-manager (1.1.1)
+  - Downloading doctrine/lexer (1.2.1)
+  - Downloading doctrine/annotations (1.12.1)
+  - Downloading doctrine/persistence (2.1.0)
+  - Downloading doctrine/common (3.1.1)
+  - Downloading doctrine/deprecations (v0.5.3)
+  - Downloading doctrine/instantiator (1.4.0)
+  - Downloading psr/container (1.1.1)
+  - Downloading symfony/service-contracts (v2.2.0)
+  - Downloading symfony/stopwatch (v5.2.4)
+  - Downloading symfony/polyfill-php80 (v1.22.1)
+  - Downloading symfony/polyfill-mbstring (v1.22.1)
+  - Downloading symfony/polyfill-intl-normalizer (v1.22.1)
+  - Downloading symfony/polyfill-intl-grapheme (v1.22.1)
+  - Downloading symfony/string (v5.2.6)
+  - Downloading symfony/polyfill-php73 (v1.22.1)
+  - Downloading symfony/console (v5.2.6)
+  - Downloading psr/log (1.1.3)
+  - Downloading symfony/filesystem (v5.2.6)
+  - Downloading laminas/laminas-zendframework-bridge (1.2.0)
+  - Downloading laminas/laminas-eventmanager (3.3.1)
+  - Downloading laminas/laminas-code (4.1.0)
+  - Downloading friendsofphp/proxy-manager-lts (v1.0.3)
+  - Downloading doctrine/dbal (2.13.0)
+  - Downloading doctrine/migrations (3.1.1)
+  - Downloading doctrine/sql-formatter (1.1.1)
+  - Downloading phpdocumentor/reflection-common (2.2.0)
+  - Downloading phpdocumentor/type-resolver (1.4.0)
+  - Downloading symfony/deprecation-contracts (v2.2.0)
+  - Downloading symfony/http-foundation (v5.2.4)
+  - Downloading symfony/http-client-contracts (v2.3.1)
+  - Downloading psr/event-dispatcher (1.0.0)
+  - Downloading symfony/event-dispatcher-contracts (v2.2.0)
+  - Downloading symfony/event-dispatcher (v5.2.4)
+  - Downloading symfony/var-dumper (v5.2.6)
+  - Downloading symfony/error-handler (v5.2.6)
+  - Downloading symfony/http-kernel (v5.2.6)
+  - Downloading symfony/routing (v5.2.6)
+  - Downloading symfony/finder (v5.2.4)
+  - Downloading symfony/dependency-injection (v5.2.6)
+  - Downloading symfony/config (v5.2.4)
+  - Downloading symfony/var-exporter (v5.2.4)
+  - Downloading psr/cache (1.0.1)
+  - Downloading symfony/cache-contracts (v2.2.0)
+  - Downloading symfony/cache (v5.2.6)
+  - Downloading symfony/framework-bundle (v5.2.6)
+  - Downloading sensio/framework-extra-bundle (v5.6.1)
+  - Downloading symfony/asset (v5.2.4)
+  - Downloading twig/twig (v3.3.0)
+  - Downloading symfony/translation-contracts (v2.3.0)
+  - Downloading symfony/twig-bridge (v5.2.6)
+  - Downloading symfony/twig-bundle (v5.2.4)
+  - Downloading symfony/web-profiler-bundle (v5.2.6)
+  - Downloading symfony/profiler-pack (v1.0.5)
+  - Downloading monolog/monolog (2.2.0)
+  - Downloading symfony/monolog-bridge (v5.2.5)
+  - Downloading symfony/monolog-bundle (v3.6.0)
+  - Downloading symfony/debug-bundle (v5.2.4)
+  - Downloading symfony/debug-pack (v1.0.9)
+  - Downloading symfony/doctrine-bridge (v5.2.6)
+  - Downloading symfony/dom-crawler (v5.2.4)
+  - Downloading symfony/dotenv (v5.2.4)
+  - Downloading symfony/expression-language (v5.2.4)
+  - Downloading symfony/property-info (v5.2.4)
+  - Downloading symfony/property-access (v5.2.4)
+  - Downloading symfony/options-resolver (v5.2.4)
+  - Downloading symfony/polyfill-intl-icu (v1.22.1)
+  - Downloading symfony/intl (v5.2.4)
+  - Downloading symfony/form (v5.2.6)
+  - Downloading symfony/http-client (v5.2.6)
+  - Downloading symfony/polyfill-intl-idn (v1.22.1)
+  - Downloading symfony/mime (v5.2.6)
+  - Downloading egulias/email-validator (3.1.0)
+  - Downloading symfony/mailer (v5.2.6)
+  - Downloading nikic/php-parser (v4.10.4)
+  - Downloading doctrine/inflector (2.0.3)
+  - Downloading symfony/maker-bundle (v1.30.2)
+  - Downloading symfony/notifier (v5.2.4)
+  - Downloading symfony/proxy-manager-bridge (v5.2.4)
+  - Downloading doctrine/orm (2.8.2)
+  - Downloading doctrine/doctrine-bundle (2.3.0)
+  - Downloading doctrine/doctrine-migrations-bundle (3.0.2)
+  - Downloading symfony/orm-pack (v2.1.0)
+  - Downloading symfony/process (v5.2.4)
+  - Downloading symfony/security-core (v5.2.6)
+  - Downloading symfony/security-http (v5.2.6)
+  - Downloading symfony/security-guard (v5.2.4)
+  - Downloading symfony/security-csrf (v5.2.4)
+  - Downloading symfony/security-bundle (v5.2.6)
+  - Downloading symfony/serializer (v5.2.4)
+  - Downloading webmozart/assert (1.10.0)
+  - Downloading phpdocumentor/reflection-docblock (5.2.2)
+  - Downloading symfony/serializer-pack (v1.0.4)
+  - Downloading symfony/phpunit-bridge (v5.2.6)
+  - Downloading symfony/css-selector (v5.2.4)
+  - Downloading symfony/browser-kit (v5.2.4)
+  - Downloading symfony/test-pack (v1.0.7)
+  - Downloading symfony/translation (v5.2.6)
+  - Downloading twig/extra-bundle (v3.3.0)
+  - Downloading symfony/twig-pack (v1.0.1)
+  - Downloading symfony/validator (v5.2.6)
+  - Downloading psr/link (1.0.0)
+  - Downloading symfony/web-link (v5.2.5)
+  - Downloading symfony/yaml (v5.2.5)
+  - Installing composer/package-versions-deprecated (1.11.99.1): Extracting archive
+  - Installing doctrine/cache (1.10.2): Extracting archive
+  - Installing doctrine/collections (1.6.7): Extracting archive
+  - Installing doctrine/event-manager (1.1.1): Extracting archive
+  - Installing doctrine/lexer (1.2.1): Extracting archive
+  - Installing doctrine/annotations (1.12.1): Extracting archive
+  - Installing doctrine/persistence (2.1.0): Extracting archive
+  - Installing doctrine/common (3.1.1): Extracting archive
+  - Installing doctrine/deprecations (v0.5.3): Extracting archive
+  - Installing doctrine/instantiator (1.4.0): Extracting archive
+  - Installing psr/container (1.1.1): Extracting archive
+  - Installing symfony/service-contracts (v2.2.0): Extracting archive
+  - Installing symfony/stopwatch (v5.2.4): Extracting archive
+  - Installing symfony/polyfill-php80 (v1.22.1): Extracting archive
+  - Installing symfony/polyfill-mbstring (v1.22.1): Extracting archive
+  - Installing symfony/polyfill-intl-normalizer (v1.22.1): Extracting archive
+  - Installing symfony/polyfill-intl-grapheme (v1.22.1): Extracting archive
+  - Installing symfony/string (v5.2.6): Extracting archive
+  - Installing symfony/polyfill-php73 (v1.22.1): Extracting archive
+  - Installing symfony/console (v5.2.6): Extracting archive
+  - Installing psr/log (1.1.3): Extracting archive
+  - Installing symfony/filesystem (v5.2.6): Extracting archive
+  - Installing laminas/laminas-zendframework-bridge (1.2.0): Extracting archive
+  - Installing laminas/laminas-eventmanager (3.3.1): Extracting archive
+  - Installing laminas/laminas-code (4.1.0): Extracting archive
+  - Installing friendsofphp/proxy-manager-lts (v1.0.3): Extracting archive
+  - Installing doctrine/dbal (2.13.0): Extracting archive
+  - Installing doctrine/migrations (3.1.1): Extracting archive
+  - Installing doctrine/sql-formatter (1.1.1): Extracting archive
+  - Installing phpdocumentor/reflection-common (2.2.0): Extracting archive
+  - Installing phpdocumentor/type-resolver (1.4.0): Extracting archive
+  - Installing symfony/deprecation-contracts (v2.2.0): Extracting archive
+  - Installing symfony/http-foundation (v5.2.4): Extracting archive
+  - Installing symfony/http-client-contracts (v2.3.1): Extracting archive
+  - Installing psr/event-dispatcher (1.0.0): Extracting archive
+  - Installing symfony/event-dispatcher-contracts (v2.2.0): Extracting archive
+  - Installing symfony/event-dispatcher (v5.2.4): Extracting archive
+  - Installing symfony/var-dumper (v5.2.6): Extracting archive
+  - Installing symfony/error-handler (v5.2.6): Extracting archive
+  - Installing symfony/http-kernel (v5.2.6): Extracting archive
+  - Installing symfony/routing (v5.2.6): Extracting archive
+  - Installing symfony/finder (v5.2.4): Extracting archive
+  - Installing symfony/dependency-injection (v5.2.6): Extracting archive
+  - Installing symfony/config (v5.2.4): Extracting archive
+  - Installing symfony/var-exporter (v5.2.4): Extracting archive
+  - Installing psr/cache (1.0.1): Extracting archive
+  - Installing symfony/cache-contracts (v2.2.0): Extracting archive
+  - Installing symfony/cache (v5.2.6): Extracting archive
+  - Installing symfony/framework-bundle (v5.2.6): Extracting archive
+  - Installing sensio/framework-extra-bundle (v5.6.1): Extracting archive
+  - Installing symfony/asset (v5.2.4): Extracting archive
+  - Installing twig/twig (v3.3.0): Extracting archive
+  - Installing symfony/translation-contracts (v2.3.0): Extracting archive
+  - Installing symfony/twig-bridge (v5.2.6): Extracting archive
+  - Installing symfony/twig-bundle (v5.2.4): Extracting archive
+  - Installing symfony/web-profiler-bundle (v5.2.6): Extracting archive
+  - Installing symfony/profiler-pack (v1.0.5): Extracting archive
+  - Installing monolog/monolog (2.2.0): Extracting archive
+  - Installing symfony/monolog-bridge (v5.2.5): Extracting archive
+  - Installing symfony/monolog-bundle (v3.6.0): Extracting archive
+  - Installing symfony/debug-bundle (v5.2.4): Extracting archive
+  - Installing symfony/debug-pack (v1.0.9): Extracting archive
+  - Installing symfony/doctrine-bridge (v5.2.6): Extracting archive
+  - Installing symfony/dom-crawler (v5.2.4): Extracting archive
+  - Installing symfony/dotenv (v5.2.4): Extracting archive
+  - Installing symfony/expression-language (v5.2.4): Extracting archive
+  - Installing symfony/property-info (v5.2.4): Extracting archive
+  - Installing symfony/property-access (v5.2.4): Extracting archive
+  - Installing symfony/options-resolver (v5.2.4): Extracting archive
+  - Installing symfony/polyfill-intl-icu (v1.22.1): Extracting archive
+  - Installing symfony/intl (v5.2.4): Extracting archive
+  - Installing symfony/form (v5.2.6): Extracting archive
+  - Installing symfony/http-client (v5.2.6): Extracting archive
+  - Installing symfony/polyfill-intl-idn (v1.22.1): Extracting archive
+  - Installing symfony/mime (v5.2.6): Extracting archive
+  - Installing egulias/email-validator (3.1.0): Extracting archive
+  - Installing symfony/mailer (v5.2.6): Extracting archive
+  - Installing nikic/php-parser (v4.10.4): Extracting archive
+  - Installing doctrine/inflector (2.0.3): Extracting archive
+  - Installing symfony/maker-bundle (v1.30.2): Extracting archive
+  - Installing symfony/notifier (v5.2.4): Extracting archive
+  - Installing symfony/proxy-manager-bridge (v5.2.4): Extracting archive
+  - Installing doctrine/orm (2.8.2): Extracting archive
+  - Installing doctrine/doctrine-bundle (2.3.0): Extracting archive
+  - Installing doctrine/doctrine-migrations-bundle (3.0.2): Extracting archive
+  - Installing symfony/orm-pack (v2.1.0): Extracting archive
+  - Installing symfony/process (v5.2.4): Extracting archive
+  - Installing symfony/security-core (v5.2.6): Extracting archive
+  - Installing symfony/security-http (v5.2.6): Extracting archive
+  - Installing symfony/security-guard (v5.2.4): Extracting archive
+  - Installing symfony/security-csrf (v5.2.4): Extracting archive
+  - Installing symfony/security-bundle (v5.2.6): Extracting archive
+  - Installing symfony/serializer (v5.2.4): Extracting archive
+  - Installing webmozart/assert (1.10.0): Extracting archive
+  - Installing phpdocumentor/reflection-docblock (5.2.2): Extracting archive
+  - Installing symfony/serializer-pack (v1.0.4): Extracting archive
+  - Installing symfony/phpunit-bridge (v5.2.6): Extracting archive
+  - Installing symfony/css-selector (v5.2.4): Extracting archive
+  - Installing symfony/browser-kit (v5.2.4): Extracting archive
+  - Installing symfony/test-pack (v1.0.7): Extracting archive
+  - Installing symfony/translation (v5.2.6): Extracting archive
+  - Installing twig/extra-bundle (v3.3.0): Extracting archive
+  - Installing symfony/twig-pack (v1.0.1): Extracting archive
+  - Installing symfony/validator (v5.2.6): Extracting archive
+  - Installing psr/link (1.0.0): Extracting archive
+  - Installing symfony/web-link (v5.2.5): Extracting archive
+  - Installing symfony/yaml (v5.2.5): Extracting archive
+Generating optimized autoload files
+composer/package-versions-deprecated: Generating version class...
+composer/package-versions-deprecated: ...done generating version class
+91 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+
+Symfony operations: 19 recipes (dd17f70baf1c3f12e10fb7bd385f5340)
+  - Configuring symfony/framework-bundle (>=5.2): From github.com/symfony/recipes:master
+  - Configuring doctrine/annotations (>=1.0): From github.com/symfony/recipes:master
+  - Configuring symfony/console (>=5.1): From github.com/symfony/recipes:master
+  - Configuring symfony/routing (>=5.1): From github.com/symfony/recipes:master
+  - Configuring sensio/framework-extra-bundle (>=5.2): From github.com/symfony/recipes:master
+  - Configuring symfony/twig-bundle (>=5.0): From github.com/symfony/recipes:master
+  - Configuring symfony/web-profiler-bundle (>=3.3): From github.com/symfony/recipes:master
+  - Configuring symfony/monolog-bundle (>=3.3): From github.com/symfony/recipes:master
+  - Configuring symfony/debug-bundle (>=4.1): From github.com/symfony/recipes:master
+  - Configuring symfony/mailer (>=4.3): From github.com/symfony/recipes:master
+  - Configuring symfony/maker-bundle (>=1.0): From github.com/symfony/recipes:master
+  - Configuring symfony/notifier (>=5.0): From github.com/symfony/recipes:master
+  - Configuring doctrine/doctrine-bundle (>=2.3): From github.com/symfony/recipes:master
+  - Configuring doctrine/doctrine-migrations-bundle (>=2.2): From github.com/symfony/recipes:master
+  - Configuring symfony/security-bundle (>=5.1): From github.com/symfony/recipes:master
+  - Configuring symfony/phpunit-bridge (>=5.1): From github.com/symfony/recipes:master
+  - Configuring symfony/translation (>=3.3): From github.com/symfony/recipes:master
+  - Configuring twig/extra-bundle (>=v3.3.0): From auto-generated recipe
+  - Configuring symfony/validator (>=4.3): From github.com/symfony/recipes:master
+Executing script cache:clear [OK]
+
+
+Some files may have been created or updated to configure your new packages.
+Please review, edit and commit them: these files are yours.
+
+Some files may have been created or updated to configure your new packages.
+Please review, edit and commit them: these files are yours.
+
+
+ What's next? 
+
+
+  * Run your application:
+    1. Go to the project directory
+    2. Create your code repository with the git init command
+    3. Download the Symfony CLI at https://symfony.com/download to install a development web server
+
+  * Read the documentation at https://symfony.com/doc
+
+
+ What's next? 
+
+
+  * You're ready to send emails.
+
+  * If you want to send emails via a supported email provider, install
+    the corresponding bridge.
+    For instance, composer require mailgun-mailer for Mailgun.
+
+  * If you want to send emails asynchronously:
+
+    1. Install the messenger component by running composer require messenger;
+    2. Add 'Symfony\Component\Mailer\Messenger\SendEmailMessage': amqp to the
+       config/packages/messenger.yaml file under framework.messenger.routing
+       and replace amqp with your transport name of choice.
+
+  * Read the documentation at https://symfony.com/doc/master/mailer.html
+
+
+ Database Configuration 
+
+
+  * Modify your DATABASE_URL config in .env
+
+  * Configure the driver (postgresql) and
+    server_version (13) in config/packages/doctrine.yaml
+
+
+ How to test? 
+
+
+  * Write test cases in the tests/ folder
+  * Run php bin/phpunit
+
+
+
+
+
+
+
+
+
+
+C:\Symfony>composer create-project symfony/website-skeleton symfony02 "3.4.*"
+Creating a "symfony/website-skeleton" project at "./symfony02"
+Installing symfony/website-skeleton (v3.4.99)
+  - Downloading symfony/website-skeleton (v3.4.99)
+  - Installing symfony/website-skeleton (v3.4.99): Extracting archive
+Created project in C:\Symfony\symfony02
+Loading composer repositories with package information
+Updating dependencies
+Lock file operations: 1 install, 0 updates, 0 removals
+  - Locking symfony/flex (v1.12.2)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 1 install, 0 updates, 0 removals
+  - Installing symfony/flex (v1.12.2): Extracting archive
+
+Symfony operations: 1 recipe (370cf9572a7f0407b21c8916522c0023)
+  - Configuring symfony/flex (>=1.0): From github.com/symfony/recipes:master
+Loading composer repositories with package information
+Restricting packages listed in "symfony/symfony" to "3.4.*"
+Updating dependencies
+Lock file operations: 100 installs, 0 updates, 0 removals
+  - Locking composer/package-versions-deprecated (1.11.99.1)
+  - Locking doctrine/annotations (1.12.1)
+  - Locking doctrine/cache (1.10.2)
+  - Locking doctrine/collections (1.6.7)
+  - Locking doctrine/common (2.13.3)
+  - Locking doctrine/dbal (2.13.0)
+  - Locking doctrine/deprecations (v0.5.3)
+  - Locking doctrine/doctrine-bundle (1.12.13)
+  - Locking doctrine/doctrine-cache-bundle (1.4.0)
+  - Locking doctrine/doctrine-migrations-bundle (3.0.2)
+  - Locking doctrine/event-manager (1.1.1)
+  - Locking doctrine/inflector (1.4.3)
+  - Locking doctrine/instantiator (1.4.0)
+  - Locking doctrine/lexer (1.2.1)
+  - Locking doctrine/migrations (3.0.1)
+  - Locking doctrine/orm (2.7.5)
+  - Locking doctrine/persistence (1.3.8)
+  - Locking doctrine/reflection (1.2.2)
+  - Locking egulias/email-validator (3.1.0)
+  - Locking fig/link-util (1.1.2)
+  - Locking jdorn/sql-formatter (v1.2.17)
+  - Locking laminas/laminas-code (4.1.0)
+  - Locking laminas/laminas-eventmanager (3.3.1)
+  - Locking laminas/laminas-zendframework-bridge (1.2.0)
+  - Locking monolog/monolog (1.26.0)
+  - Locking nikic/php-parser (v4.10.4)
+  - Locking ocramius/proxy-manager (2.11.1)
+  - Locking phpdocumentor/reflection-common (2.2.0)
+  - Locking phpdocumentor/reflection-docblock (5.2.2)
+  - Locking phpdocumentor/type-resolver (1.4.0)
+  - Locking psr/cache (1.0.1)
+  - Locking psr/container (1.1.1)
+  - Locking psr/link (1.0.0)
+  - Locking psr/log (1.1.3)
+  - Locking psr/simple-cache (1.0.1)
+  - Locking sensio/framework-extra-bundle (v5.4.1)
+  - Locking swiftmailer/swiftmailer (v6.2.7)
+  - Locking symfony/asset (v3.4.47)
+  - Locking symfony/browser-kit (v3.4.47)
+  - Locking symfony/cache (v3.4.47)
+  - Locking symfony/class-loader (v3.4.47)
+  - Locking symfony/config (v3.4.47)
+  - Locking symfony/console (v3.4.47)
+  - Locking symfony/css-selector (v3.4.47)
+  - Locking symfony/debug (v3.4.47)
+  - Locking symfony/debug-bundle (v3.4.47)
+  - Locking symfony/debug-pack (v1.0.9)
+  - Locking symfony/dependency-injection (v3.4.47)
+  - Locking symfony/deprecation-contracts (v2.2.0)
+  - Locking symfony/doctrine-bridge (v3.4.47)
+  - Locking symfony/dom-crawler (v3.4.47)
+  - Locking symfony/dotenv (v3.4.47)
+  - Locking symfony/event-dispatcher (v3.4.47)
+  - Locking symfony/expression-language (v3.4.47)
+  - Locking symfony/filesystem (v3.4.47)
+  - Locking symfony/finder (v3.4.47)
+  - Locking symfony/form (v3.4.47)
+  - Locking symfony/framework-bundle (v3.4.47)
+  - Locking symfony/http-foundation (v3.4.47)
+  - Locking symfony/http-kernel (v3.4.47)
+  - Locking symfony/inflector (v3.4.47)
+  - Locking symfony/intl (v3.4.47)
+  - Locking symfony/maker-bundle (v1.29.1)
+  - Locking symfony/monolog-bridge (v3.4.47)
+  - Locking symfony/monolog-bundle (v3.6.0)
+  - Locking symfony/options-resolver (v3.4.47)
+  - Locking symfony/orm-pack (v2.1.0)
+  - Locking symfony/phpunit-bridge (v5.2.6)
+  - Locking symfony/polyfill-apcu (v1.22.1)
+  - Locking symfony/polyfill-intl-icu (v1.22.1)
+  - Locking symfony/polyfill-intl-idn (v1.22.1)
+  - Locking symfony/polyfill-intl-normalizer (v1.22.1)
+  - Locking symfony/polyfill-mbstring (v1.22.1)
+  - Locking symfony/polyfill-php72 (v1.22.1)
+  - Locking symfony/process (v3.4.47)
+  - Locking symfony/profiler-pack (v1.0.5)
+  - Locking symfony/property-access (v3.4.47)
+  - Locking symfony/property-info (v3.4.47)
+  - Locking symfony/proxy-manager-bridge (v3.4.47)
+  - Locking symfony/routing (v3.4.47)
+  - Locking symfony/security (v3.4.47)
+  - Locking symfony/security-bundle (v3.4.47)
+  - Locking symfony/serializer (v3.4.47)
+  - Locking symfony/serializer-pack (v1.0.4)
+  - Locking symfony/service-contracts (v2.2.0)
+  - Locking symfony/stopwatch (v3.4.47)
+  - Locking symfony/swiftmailer-bundle (v3.3.1)
+  - Locking symfony/test-pack (v1.0.7)
+  - Locking symfony/translation (v3.4.47)
+  - Locking symfony/twig-bridge (v3.4.47)
+  - Locking symfony/twig-bundle (v3.4.47)
+  - Locking symfony/validator (v3.4.47)
+  - Locking symfony/var-dumper (v3.4.47)
+  - Locking symfony/web-link (v3.4.47)
+  - Locking symfony/web-profiler-bundle (v3.4.47)
+  - Locking symfony/web-server-bundle (v3.4.47)
+  - Locking symfony/yaml (v3.4.47)
+  - Locking twig/twig (v2.14.4)
+  - Locking webimpress/safe-writer (2.1.0)
+  - Locking webmozart/assert (1.10.0)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 100 installs, 0 updates, 0 removals
+  - Downloading doctrine/reflection (1.2.2)
+  - Downloading doctrine/persistence (1.3.8)
+  - Downloading doctrine/inflector (1.4.3)
+  - Downloading doctrine/common (2.13.3)
+  - Downloading symfony/doctrine-bridge (v3.4.47)
+  - Downloading doctrine/doctrine-cache-bundle (1.4.0)
+  - Downloading symfony/stopwatch (v3.4.47)
+  - Downloading symfony/debug (v3.4.47)
+  - Downloading symfony/console (v3.4.47)
+  - Downloading webimpress/safe-writer (2.1.0)
+  - Downloading ocramius/proxy-manager (2.11.1)
+  - Downloading doctrine/migrations (3.0.1)
+  - Downloading symfony/polyfill-php72 (v1.22.1)
+  - Downloading symfony/http-foundation (v3.4.47)
+  - Downloading symfony/event-dispatcher (v3.4.47)
+  - Downloading symfony/http-kernel (v3.4.47)
+  - Downloading symfony/routing (v3.4.47)
+  - Downloading symfony/finder (v3.4.47)
+  - Downloading symfony/filesystem (v3.4.47)
+  - Downloading symfony/dependency-injection (v3.4.47)
+  - Downloading symfony/config (v3.4.47)
+  - Downloading symfony/class-loader (v3.4.47)
+  - Downloading symfony/polyfill-apcu (v1.22.1)
+  - Downloading symfony/cache (v3.4.47)
+  - Downloading symfony/framework-bundle (v3.4.47)
+  - Downloading sensio/framework-extra-bundle (v5.4.1)
+  - Downloading symfony/asset (v3.4.47)
+  - Downloading symfony/var-dumper (v3.4.47)
+  - Downloading twig/twig (v2.14.4)
+  - Downloading symfony/twig-bridge (v3.4.47)
+  - Downloading symfony/twig-bundle (v3.4.47)
+  - Downloading symfony/web-profiler-bundle (v3.4.47)
+  - Downloading monolog/monolog (1.26.0)
+  - Downloading symfony/monolog-bridge (v3.4.47)
+  - Downloading symfony/debug-bundle (v3.4.47)
+  - Downloading symfony/dom-crawler (v3.4.47)
+  - Downloading symfony/dotenv (v3.4.47)
+  - Downloading symfony/expression-language (v3.4.47)
+  - Downloading symfony/inflector (v3.4.47)
+  - Downloading symfony/property-access (v3.4.47)
+  - Downloading symfony/options-resolver (v3.4.47)
+  - Downloading symfony/intl (v3.4.47)
+  - Downloading symfony/form (v3.4.47)
+  - Downloading symfony/maker-bundle (v1.29.1)
+  - Downloading symfony/proxy-manager-bridge (v3.4.47)
+  - Downloading doctrine/orm (2.7.5)
+  - Downloading doctrine/doctrine-bundle (1.12.13)
+  - Downloading symfony/security (v3.4.47)
+  - Downloading symfony/security-bundle (v3.4.47)
+  - Downloading symfony/serializer (v3.4.47)
+  - Downloading symfony/property-info (v3.4.47)
+  - Downloading swiftmailer/swiftmailer (v6.2.7)
+  - Downloading symfony/swiftmailer-bundle (v3.3.1)
+  - Downloading symfony/css-selector (v3.4.47)
+  - Downloading symfony/browser-kit (v3.4.47)
+  - Downloading symfony/translation (v3.4.47)
+  - Downloading symfony/validator (v3.4.47)
+  - Downloading fig/link-util (1.1.2)
+  - Downloading symfony/web-link (v3.4.47)
+  - Downloading symfony/process (v3.4.47)
+  - Downloading symfony/web-server-bundle (v3.4.47)
+  - Downloading symfony/yaml (v3.4.47)
+  - Installing composer/package-versions-deprecated (1.11.99.1): Extracting archive
+  - Installing doctrine/collections (1.6.7): Extracting archive
+  - Installing doctrine/deprecations (v0.5.3): Extracting archive
+  - Installing symfony/polyfill-mbstring (v1.22.1): Extracting archive
+  - Installing doctrine/lexer (1.2.1): Extracting archive
+  - Installing doctrine/annotations (1.12.1): Extracting archive
+  - Installing doctrine/reflection (1.2.2): Extracting archive
+  - Installing doctrine/event-manager (1.1.1): Extracting archive
+  - Installing doctrine/cache (1.10.2): Extracting archive
+  - Installing doctrine/persistence (1.3.8): Extracting archive
+  - Installing doctrine/inflector (1.4.3): Extracting archive
+  - Installing doctrine/common (2.13.3): Extracting archive
+  - Installing symfony/doctrine-bridge (v3.4.47): Extracting archive
+  - Installing doctrine/doctrine-cache-bundle (1.4.0): Extracting archive
+  - Installing doctrine/instantiator (1.4.0): Extracting archive
+  - Installing symfony/stopwatch (v3.4.47): Extracting archive
+  - Installing psr/log (1.1.3): Extracting archive
+  - Installing symfony/debug (v3.4.47): Extracting archive
+  - Installing symfony/console (v3.4.47): Extracting archive
+  - Installing webimpress/safe-writer (2.1.0): Extracting archive
+  - Installing laminas/laminas-zendframework-bridge (1.2.0): Extracting archive
+  - Installing laminas/laminas-eventmanager (3.3.1): Extracting archive
+  - Installing laminas/laminas-code (4.1.0): Extracting archive
+  - Installing ocramius/proxy-manager (2.11.1): Extracting archive
+  - Installing doctrine/dbal (2.13.0): Extracting archive
+  - Installing doctrine/migrations (3.0.1): Extracting archive
+  - Installing symfony/polyfill-php72 (v1.22.1): Extracting archive
+  - Installing symfony/polyfill-intl-normalizer (v1.22.1): Extracting archive
+  - Installing symfony/polyfill-intl-idn (v1.22.1): Extracting archive
+  - Installing egulias/email-validator (3.1.0): Extracting archive
+  - Installing jdorn/sql-formatter (v1.2.17): Extracting archive
+  - Installing phpdocumentor/reflection-common (2.2.0): Extracting archive
+  - Installing phpdocumentor/type-resolver (1.4.0): Extracting archive
+  - Installing psr/cache (1.0.1): Extracting archive
+  - Installing psr/simple-cache (1.0.1): Extracting archive
+  - Installing symfony/http-foundation (v3.4.47): Extracting archive
+  - Installing symfony/event-dispatcher (v3.4.47): Extracting archive
+  - Installing symfony/http-kernel (v3.4.47): Extracting archive
+  - Installing symfony/routing (v3.4.47): Extracting archive
+  - Installing symfony/finder (v3.4.47): Extracting archive
+  - Installing symfony/filesystem (v3.4.47): Extracting archive
+  - Installing psr/container (1.1.1): Extracting archive
+  - Installing symfony/dependency-injection (v3.4.47): Extracting archive
+  - Installing symfony/config (v3.4.47): Extracting archive
+  - Installing symfony/class-loader (v3.4.47): Extracting archive
+  - Installing symfony/polyfill-apcu (v1.22.1): Extracting archive
+  - Installing symfony/cache (v3.4.47): Extracting archive
+  - Installing symfony/framework-bundle (v3.4.47): Extracting archive
+  - Installing sensio/framework-extra-bundle (v5.4.1): Extracting archive
+  - Installing symfony/asset (v3.4.47): Extracting archive
+  - Installing symfony/var-dumper (v3.4.47): Extracting archive
+  - Installing twig/twig (v2.14.4): Extracting archive
+  - Installing symfony/twig-bridge (v3.4.47): Extracting archive
+  - Installing symfony/twig-bundle (v3.4.47): Extracting archive
+  - Installing symfony/web-profiler-bundle (v3.4.47): Extracting archive
+  - Installing symfony/profiler-pack (v1.0.5): Extracting archive
+  - Installing monolog/monolog (1.26.0): Extracting archive
+  - Installing symfony/monolog-bridge (v3.4.47): Extracting archive
+  - Installing symfony/monolog-bundle (v3.6.0): Extracting archive
+  - Installing symfony/debug-bundle (v3.4.47): Extracting archive
+  - Installing symfony/debug-pack (v1.0.9): Extracting archive
+  - Installing symfony/dom-crawler (v3.4.47): Extracting archive
+  - Installing symfony/dotenv (v3.4.47): Extracting archive
+  - Installing symfony/expression-language (v3.4.47): Extracting archive
+  - Installing symfony/inflector (v3.4.47): Extracting archive
+  - Installing symfony/property-access (v3.4.47): Extracting archive
+  - Installing symfony/options-resolver (v3.4.47): Extracting archive
+  - Installing symfony/polyfill-intl-icu (v1.22.1): Extracting archive
+  - Installing symfony/intl (v3.4.47): Extracting archive
+  - Installing symfony/form (v3.4.47): Extracting archive
+  - Installing symfony/deprecation-contracts (v2.2.0): Extracting archive
+  - Installing nikic/php-parser (v4.10.4): Extracting archive
+  - Installing symfony/maker-bundle (v1.29.1): Extracting archive
+  - Installing symfony/proxy-manager-bridge (v3.4.47): Extracting archive
+  - Installing doctrine/orm (2.7.5): Extracting archive
+  - Installing symfony/service-contracts (v2.2.0): Extracting archive
+  - Installing doctrine/doctrine-bundle (1.12.13): Extracting archive
+  - Installing doctrine/doctrine-migrations-bundle (3.0.2): Extracting archive
+  - Installing symfony/orm-pack (v2.1.0): Extracting archive
+  - Installing symfony/security (v3.4.47): Extracting archive
+  - Installing symfony/security-bundle (v3.4.47): Extracting archive
+  - Installing symfony/serializer (v3.4.47): Extracting archive
+  - Installing symfony/property-info (v3.4.47): Extracting archive
+  - Installing webmozart/assert (1.10.0): Extracting archive
+  - Installing phpdocumentor/reflection-docblock (5.2.2): Extracting archive
+  - Installing symfony/serializer-pack (v1.0.4): Extracting archive
+  - Installing swiftmailer/swiftmailer (v6.2.7): Extracting archive
+  - Installing symfony/swiftmailer-bundle (v3.3.1): Extracting archive
+  - Installing symfony/phpunit-bridge (v5.2.6): Extracting archive
+  - Installing symfony/css-selector (v3.4.47): Extracting archive
+  - Installing symfony/browser-kit (v3.4.47): Extracting archive
+  - Installing symfony/test-pack (v1.0.7): Extracting archive
+  - Installing symfony/translation (v3.4.47): Extracting archive
+  - Installing symfony/validator (v3.4.47): Extracting archive
+  - Installing psr/link (1.0.0): Extracting archive
+  - Installing fig/link-util (1.1.2): Extracting archive
+  - Installing symfony/web-link (v3.4.47): Extracting archive
+  - Installing symfony/process (v3.4.47): Extracting archive
+  - Installing symfony/web-server-bundle (v3.4.47): Extracting archive
+  - Installing symfony/yaml (v3.4.47): Extracting archive
+Package doctrine/doctrine-cache-bundle is abandoned, you should avoid using it. No replacement was suggested.
+Package doctrine/reflection is abandoned, you should avoid using it. Use roave/better-reflection instead.
+Generating autoload files
+composer/package-versions-deprecated: Generating version class...
+composer/package-versions-deprecated: ...done generating version class
+81 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+
+Symfony operations: 18 recipes (370cf9572a7f0407b21c8916522c0023)
+  - Configuring symfony/framework-bundle (>=3.4): From github.com/symfony/recipes:master
+  - Configuring doctrine/annotations (>=1.0): From github.com/symfony/recipes:master
+  - Configuring doctrine/doctrine-cache-bundle (>=1.4.0): From auto-generated recipe
+  - Configuring symfony/console (>=3.3): From github.com/symfony/recipes:master
+  - Configuring symfony/routing (>=3.3): From github.com/symfony/recipes:master
+  - Configuring sensio/framework-extra-bundle (>=5.2): From github.com/symfony/recipes:master
+  - Configuring symfony/twig-bundle (>=3.3): From github.com/symfony/recipes:master
+  - Configuring symfony/web-profiler-bundle (>=3.3): From github.com/symfony/recipes:master
+  - Configuring symfony/monolog-bundle (>=3.3): From github.com/symfony/recipes:master
+  - Configuring symfony/debug-bundle (>=3.3): From github.com/symfony/recipes:master
+  - Configuring symfony/maker-bundle (>=1.0): From github.com/symfony/recipes:master
+  - Configuring doctrine/doctrine-bundle (>=1.12): From github.com/symfony/recipes:master
+  - Configuring doctrine/doctrine-migrations-bundle (>=2.2): From github.com/symfony/recipes:master
+  - Configuring symfony/security-bundle (>=3.3): From github.com/symfony/recipes:master
+  - Configuring symfony/swiftmailer-bundle (>=2.5): From github.com/symfony/recipes:master
+  - Configuring symfony/phpunit-bridge (>=5.1): From github.com/symfony/recipes:master
+  - Configuring symfony/translation (>=3.3): From github.com/symfony/recipes:master
+  - Configuring symfony/web-server-bundle (>=3.3): From github.com/symfony/recipes:master
+Executing script cache:clear [OK]
+Executing script assets:install public [OK]
+
+Some files may have been created or updated to configure your new packages.
+Please review, edit and commit them: these files are yours.
+
+Some files may have been created or updated to configure your new packages.
+Please review, edit and commit them: these files are yours.
+
+
+ What's next? 
+
+
+  * Run your application:
+    1. Go to the project directory
+    2. Create your code repository with the git init command
+    3. Download the Symfony CLI at https://symfony.com/download to install a development web server,
+       or run composer require server --dev for a minimalist one
+
+  * Read the documentation at https://symfony.com/doc
+
+
+ Database Configuration 
+
+
+  * Modify your DATABASE_URL config in .env
+
+  * Configure the driver (mysql) and
+    server_version (5.7) in config/packages/doctrine.yaml
+
+
+ How to test? 
+
+
+  * Write test cases in the tests/ folder
+  * Run php bin/phpunit
+
+
+
+
+
+
+
+
+
+C:\Symfony>composer create-project symfony/website-skeleton symfony03 "4.4.*" 
+Creating a "symfony/website-skeleton" project at "./symfony03"
+Installing symfony/website-skeleton (v4.4.99)
+  - Downloading symfony/website-skeleton (v4.4.99)
+  - Installing symfony/website-skeleton (v4.4.99): Extracting archive
+Created project in C:\Symfony\symfony03
+Loading composer repositories with package information
+Updating dependencies
+Lock file operations: 1 install, 0 updates, 0 removals
+  - Locking symfony/flex (v1.12.2)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 1 install, 0 updates, 0 removals
+  - Installing symfony/flex (v1.12.2): Extracting archive
+
+Symfony operations: 1 recipe (8a138a053b066822400e7c06b9e4a20f)
+  - Configuring symfony/flex (>=1.0): From github.com/symfony/recipes:master
+Loading composer repositories with package information
+Restricting packages listed in "symfony/symfony" to "4.4.*"
+Updating dependencies
+Lock file operations: 106 installs, 0 updates, 0 removals
+  - Locking composer/package-versions-deprecated (1.11.99.1)
+  - Locking doctrine/annotations (1.12.1)
+  - Locking doctrine/cache (1.10.2)
+  - Locking doctrine/collections (1.6.7)
+  - Locking doctrine/common (3.1.1)
+  - Locking doctrine/dbal (2.13.0)
+  - Locking doctrine/deprecations (v0.5.3)
+  - Locking doctrine/doctrine-bundle (2.3.0)
+  - Locking doctrine/doctrine-migrations-bundle (3.0.2)
+  - Locking doctrine/event-manager (1.1.1)
+  - Locking doctrine/inflector (2.0.3)
+  - Locking doctrine/instantiator (1.4.0)
+  - Locking doctrine/lexer (1.2.1)
+  - Locking doctrine/migrations (3.1.1)
+  - Locking doctrine/orm (2.8.2)
+  - Locking doctrine/persistence (2.1.0)
+  - Locking doctrine/sql-formatter (1.1.1)
+  - Locking egulias/email-validator (3.1.0)
+  - Locking friendsofphp/proxy-manager-lts (v1.0.3)
+  - Locking laminas/laminas-code (4.1.0)
+  - Locking laminas/laminas-eventmanager (3.3.1)
+  - Locking laminas/laminas-zendframework-bridge (1.2.0)
+  - Locking monolog/monolog (1.26.0)
+  - Locking nikic/php-parser (v4.10.4)
+  - Locking phpdocumentor/reflection-common (2.2.0)
+  - Locking phpdocumentor/reflection-docblock (5.2.2)
+  - Locking phpdocumentor/type-resolver (1.4.0)
+  - Locking psr/cache (1.0.1)
+  - Locking psr/container (1.1.1)
+  - Locking psr/link (1.0.0)
+  - Locking psr/log (1.1.3)
+  - Locking sensio/framework-extra-bundle (v5.6.1)
+  - Locking symfony/asset (v4.4.20)
+  - Locking symfony/browser-kit (v4.4.20)
+  - Locking symfony/cache (v4.4.21)
+  - Locking symfony/cache-contracts (v2.2.0)
+  - Locking symfony/config (v4.4.20)
+  - Locking symfony/console (v4.4.21)
+  - Locking symfony/css-selector (v4.4.20)
+  - Locking symfony/debug (v4.4.20)
+  - Locking symfony/debug-bundle (v4.4.20)
+  - Locking symfony/debug-pack (v1.0.9)
+  - Locking symfony/dependency-injection (v4.4.21)
+  - Locking symfony/deprecation-contracts (v2.2.0)
+  - Locking symfony/doctrine-bridge (v4.4.21)
+  - Locking symfony/dom-crawler (v4.4.20)
+  - Locking symfony/dotenv (v4.4.20)
+  - Locking symfony/error-handler (v4.4.21)
+  - Locking symfony/event-dispatcher (v4.4.20)
+  - Locking symfony/event-dispatcher-contracts (v1.1.9)
+  - Locking symfony/expression-language (v4.4.20)
+  - Locking symfony/filesystem (v4.4.21)
+  - Locking symfony/finder (v4.4.20)
+  - Locking symfony/form (v4.4.21)
+  - Locking symfony/framework-bundle (v4.4.21)
+  - Locking symfony/http-client (v4.4.21)
+  - Locking symfony/http-client-contracts (v2.3.1)
+  - Locking symfony/http-foundation (v4.4.20)
+  - Locking symfony/http-kernel (v4.4.21)
+  - Locking symfony/inflector (v4.4.21)
+  - Locking symfony/intl (v4.4.20)
+  - Locking symfony/mailer (v4.4.21)
+  - Locking symfony/maker-bundle (v1.30.2)
+  - Locking symfony/mime (v4.4.21)
+  - Locking symfony/monolog-bridge (v4.4.21)
+  - Locking symfony/monolog-bundle (v3.6.0)
+  - Locking symfony/options-resolver (v4.4.20)
+  - Locking symfony/orm-pack (v2.1.0)
+  - Locking symfony/phpunit-bridge (v5.2.6)
+  - Locking symfony/polyfill-intl-icu (v1.22.1)
+  - Locking symfony/polyfill-intl-idn (v1.22.1)
+  - Locking symfony/polyfill-intl-normalizer (v1.22.1)
+  - Locking symfony/polyfill-mbstring (v1.22.1)
+  - Locking symfony/polyfill-php72 (v1.22.1)
+  - Locking symfony/polyfill-php73 (v1.22.1)
+  - Locking symfony/polyfill-php80 (v1.22.1)
+  - Locking symfony/process (v4.4.20)
+  - Locking symfony/profiler-pack (v1.0.5)
+  - Locking symfony/property-access (v4.4.20)
+  - Locking symfony/property-info (v4.4.20)
+  - Locking symfony/proxy-manager-bridge (v4.4.20)
+  - Locking symfony/routing (v4.4.20)
+  - Locking symfony/security-bundle (v4.4.21)
+  - Locking symfony/security-core (v4.4.21)
+  - Locking symfony/security-csrf (v4.4.20)
+  - Locking symfony/security-guard (v4.4.20)
+  - Locking symfony/security-http (v4.4.21)
+  - Locking symfony/serializer (v4.4.20)
+  - Locking symfony/serializer-pack (v1.0.4)
+  - Locking symfony/service-contracts (v2.2.0)
+  - Locking symfony/stopwatch (v4.4.20)
+  - Locking symfony/test-pack (v1.0.7)
+  - Locking symfony/translation (v4.4.21)
+  - Locking symfony/translation-contracts (v2.3.0)
+  - Locking symfony/twig-bridge (v4.4.21)
+  - Locking symfony/twig-bundle (v4.4.20)
+  - Locking symfony/twig-pack (v1.0.1)
+  - Locking symfony/validator (v4.4.21)
+  - Locking symfony/var-dumper (v4.4.21)
+  - Locking symfony/var-exporter (v4.4.20)
+  - Locking symfony/web-link (v4.4.21)
+  - Locking symfony/web-profiler-bundle (v4.4.21)
+  - Locking symfony/yaml (v4.4.21)
+  - Locking twig/extra-bundle (v3.3.0)
+  - Locking twig/twig (v3.3.0)
+  - Locking webmozart/assert (1.10.0)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 106 installs, 0 updates, 0 removals
+  - Downloading symfony/stopwatch (v4.4.20)
+  - Downloading symfony/console (v4.4.21)
+  - Downloading symfony/filesystem (v4.4.21)
+  - Downloading symfony/mime (v4.4.21)
+  - Downloading symfony/http-foundation (v4.4.20)
+  - Downloading symfony/event-dispatcher-contracts (v1.1.9)
+  - Downloading symfony/event-dispatcher (v4.4.20)
+  - Downloading symfony/var-dumper (v4.4.21)
+  - Downloading symfony/debug (v4.4.20)
+  - Downloading symfony/error-handler (v4.4.21)
+  - Downloading symfony/http-kernel (v4.4.21)
+  - Downloading symfony/routing (v4.4.20)
+  - Downloading symfony/finder (v4.4.20)
+  - Downloading symfony/dependency-injection (v4.4.21)
+  - Downloading symfony/config (v4.4.20)
+  - Downloading symfony/var-exporter (v4.4.20)
+  - Downloading symfony/cache (v4.4.21)
+  - Downloading symfony/framework-bundle (v4.4.21)
+  - Downloading symfony/asset (v4.4.20)
+  - Downloading symfony/twig-bridge (v4.4.21)
+  - Downloading symfony/twig-bundle (v4.4.20)
+  - Downloading symfony/web-profiler-bundle (v4.4.21)
+  - Downloading symfony/monolog-bridge (v4.4.21)
+  - Downloading symfony/debug-bundle (v4.4.20)
+  - Downloading symfony/doctrine-bridge (v4.4.21)
+  - Downloading symfony/dom-crawler (v4.4.20)
+  - Downloading symfony/dotenv (v4.4.20)
+  - Downloading symfony/expression-language (v4.4.20)
+  - Downloading symfony/inflector (v4.4.21)
+  - Downloading symfony/property-access (v4.4.20)
+  - Downloading symfony/options-resolver (v4.4.20)
+  - Downloading symfony/intl (v4.4.20)
+  - Downloading symfony/form (v4.4.21)
+  - Downloading symfony/http-client (v4.4.21)
+  - Downloading symfony/mailer (v4.4.21)
+  - Downloading symfony/proxy-manager-bridge (v4.4.20)
+  - Downloading symfony/process (v4.4.20)
+  - Downloading symfony/security-core (v4.4.21)
+  - Downloading symfony/security-http (v4.4.21)
+  - Downloading symfony/security-guard (v4.4.20)
+  - Downloading symfony/security-csrf (v4.4.20)
+  - Downloading symfony/security-bundle (v4.4.21)
+  - Downloading symfony/serializer (v4.4.20)
+  - Downloading symfony/property-info (v4.4.20)
+  - Downloading symfony/css-selector (v4.4.20)
+  - Downloading symfony/browser-kit (v4.4.20)
+  - Downloading symfony/translation (v4.4.21)
+  - Downloading symfony/validator (v4.4.21)
+  - Downloading symfony/web-link (v4.4.21)
+  - Downloading symfony/yaml (v4.4.21)
+  - Installing composer/package-versions-deprecated (1.11.99.1): Extracting archive
+  - Installing doctrine/cache (1.10.2): Extracting archive
+  - Installing doctrine/collections (1.6.7): Extracting archive
+  - Installing doctrine/event-manager (1.1.1): Extracting archive
+  - Installing doctrine/lexer (1.2.1): Extracting archive
+  - Installing doctrine/annotations (1.12.1): Extracting archive
+  - Installing doctrine/persistence (2.1.0): Extracting archive
+  - Installing doctrine/common (3.1.1): Extracting archive
+  - Installing doctrine/deprecations (v0.5.3): Extracting archive
+  - Installing doctrine/instantiator (1.4.0): Extracting archive
+  - Installing psr/container (1.1.1): Extracting archive
+  - Installing symfony/service-contracts (v2.2.0): Extracting archive
+  - Installing symfony/stopwatch (v4.4.20): Extracting archive
+  - Installing symfony/polyfill-php80 (v1.22.1): Extracting archive
+  - Installing symfony/polyfill-php73 (v1.22.1): Extracting archive
+  - Installing symfony/polyfill-mbstring (v1.22.1): Extracting archive
+  - Installing symfony/console (v4.4.21): Extracting archive
+  - Installing psr/log (1.1.3): Extracting archive
+  - Installing symfony/filesystem (v4.4.21): Extracting archive
+  - Installing laminas/laminas-zendframework-bridge (1.2.0): Extracting archive
+  - Installing laminas/laminas-eventmanager (3.3.1): Extracting archive
+  - Installing laminas/laminas-code (4.1.0): Extracting archive
+  - Installing friendsofphp/proxy-manager-lts (v1.0.3): Extracting archive
+  - Installing doctrine/dbal (2.13.0): Extracting archive
+  - Installing doctrine/migrations (3.1.1): Extracting archive
+  - Installing doctrine/sql-formatter (1.1.1): Extracting archive
+  - Installing phpdocumentor/reflection-common (2.2.0): Extracting archive
+  - Installing phpdocumentor/type-resolver (1.4.0): Extracting archive
+  - Installing symfony/polyfill-php72 (v1.22.1): Extracting archive
+  - Installing symfony/polyfill-intl-normalizer (v1.22.1): Extracting archive
+  - Installing symfony/polyfill-intl-idn (v1.22.1): Extracting archive
+  - Installing symfony/mime (v4.4.21): Extracting archive
+  - Installing symfony/http-foundation (v4.4.20): Extracting archive
+  - Installing symfony/http-client-contracts (v2.3.1): Extracting archive
+  - Installing symfony/event-dispatcher-contracts (v1.1.9): Extracting archive
+  - Installing symfony/event-dispatcher (v4.4.20): Extracting archive
+  - Installing symfony/var-dumper (v4.4.21): Extracting archive
+  - Installing symfony/debug (v4.4.20): Extracting archive
+  - Installing symfony/error-handler (v4.4.21): Extracting archive
+  - Installing symfony/http-kernel (v4.4.21): Extracting archive
+  - Installing symfony/routing (v4.4.20): Extracting archive
+  - Installing symfony/finder (v4.4.20): Extracting archive
+  - Installing symfony/dependency-injection (v4.4.21): Extracting archive
+  - Installing symfony/config (v4.4.20): Extracting archive
+  - Installing symfony/var-exporter (v4.4.20): Extracting archive
+  - Installing psr/cache (1.0.1): Extracting archive
+  - Installing symfony/cache-contracts (v2.2.0): Extracting archive
+  - Installing symfony/cache (v4.4.21): Extracting archive
+  - Installing symfony/framework-bundle (v4.4.21): Extracting archive
+  - Installing sensio/framework-extra-bundle (v5.6.1): Extracting archive
+  - Installing symfony/asset (v4.4.20): Extracting archive
+  - Installing twig/twig (v3.3.0): Extracting archive
+  - Installing symfony/translation-contracts (v2.3.0): Extracting archive
+  - Installing symfony/twig-bridge (v4.4.21): Extracting archive
+  - Installing symfony/twig-bundle (v4.4.20): Extracting archive
+  - Installing symfony/web-profiler-bundle (v4.4.21): Extracting archive
+  - Installing symfony/profiler-pack (v1.0.5): Extracting archive
+  - Installing monolog/monolog (1.26.0): Extracting archive
+  - Installing symfony/monolog-bridge (v4.4.21): Extracting archive
+  - Installing symfony/monolog-bundle (v3.6.0): Extracting archive
+  - Installing symfony/debug-bundle (v4.4.20): Extracting archive
+  - Installing symfony/debug-pack (v1.0.9): Extracting archive
+  - Installing symfony/doctrine-bridge (v4.4.21): Extracting archive
+  - Installing symfony/dom-crawler (v4.4.20): Extracting archive
+  - Installing symfony/dotenv (v4.4.20): Extracting archive
+  - Installing symfony/expression-language (v4.4.20): Extracting archive
+  - Installing symfony/inflector (v4.4.21): Extracting archive
+  - Installing symfony/property-access (v4.4.20): Extracting archive
+  - Installing symfony/options-resolver (v4.4.20): Extracting archive
+  - Installing symfony/polyfill-intl-icu (v1.22.1): Extracting archive
+  - Installing symfony/intl (v4.4.20): Extracting archive
+  - Installing symfony/form (v4.4.21): Extracting archive
+  - Installing symfony/http-client (v4.4.21): Extracting archive
+  - Installing egulias/email-validator (3.1.0): Extracting archive
+  - Installing symfony/mailer (v4.4.21): Extracting archive
+  - Installing symfony/deprecation-contracts (v2.2.0): Extracting archive
+  - Installing nikic/php-parser (v4.10.4): Extracting archive
+  - Installing doctrine/inflector (2.0.3): Extracting archive
+  - Installing symfony/maker-bundle (v1.30.2): Extracting archive
+  - Installing symfony/proxy-manager-bridge (v4.4.20): Extracting archive
+  - Installing doctrine/orm (2.8.2): Extracting archive
+  - Installing doctrine/doctrine-bundle (2.3.0): Extracting archive
+  - Installing doctrine/doctrine-migrations-bundle (3.0.2): Extracting archive
+  - Installing symfony/orm-pack (v2.1.0): Extracting archive
+  - Installing symfony/process (v4.4.20): Extracting archive
+  - Installing symfony/security-core (v4.4.21): Extracting archive
+  - Installing symfony/security-http (v4.4.21): Extracting archive
+  - Installing symfony/security-guard (v4.4.20): Extracting archive
+  - Installing symfony/security-csrf (v4.4.20): Extracting archive
+  - Installing symfony/security-bundle (v4.4.21): Extracting archive
+  - Installing symfony/serializer (v4.4.20): Extracting archive
+  - Installing symfony/property-info (v4.4.20): Extracting archive
+  - Installing webmozart/assert (1.10.0): Extracting archive
+  - Installing phpdocumentor/reflection-docblock (5.2.2): Extracting archive
+  - Installing symfony/serializer-pack (v1.0.4): Extracting archive
+  - Installing symfony/phpunit-bridge (v5.2.6): Extracting archive
+  - Installing symfony/css-selector (v4.4.20): Extracting archive
+  - Installing symfony/browser-kit (v4.4.20): Extracting archive
+  - Installing symfony/test-pack (v1.0.7): Extracting archive
+  - Installing symfony/translation (v4.4.21): Extracting archive
+  - Installing twig/extra-bundle (v3.3.0): Extracting archive
+  - Installing symfony/twig-pack (v1.0.1): Extracting archive
+  - Installing symfony/validator (v4.4.21): Extracting archive
+  - Installing psr/link (1.0.0): Extracting archive
+  - Installing symfony/web-link (v4.4.21): Extracting archive
+  - Installing symfony/yaml (v4.4.21): Extracting archive
+Generating autoload files
+composer/package-versions-deprecated: Generating version class...
+composer/package-versions-deprecated: ...done generating version class
+91 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+
+Symfony operations: 18 recipes (8a138a053b066822400e7c06b9e4a20f)
+  - Configuring symfony/framework-bundle (>=4.4): From github.com/symfony/recipes:master
+  - Configuring doctrine/annotations (>=1.0): From github.com/symfony/recipes:master
+  - Configuring symfony/console (>=4.4): From github.com/symfony/recipes:master
+  - Configuring symfony/routing (>=4.2): From github.com/symfony/recipes:master
+  - Configuring sensio/framework-extra-bundle (>=5.2): From github.com/symfony/recipes:master
+  - Configuring symfony/twig-bundle (>=4.4): From github.com/symfony/recipes:master
+  - Configuring symfony/web-profiler-bundle (>=3.3): From github.com/symfony/recipes:master
+  - Configuring symfony/monolog-bundle (>=3.3): From github.com/symfony/recipes:master
+  - Configuring symfony/debug-bundle (>=4.1): From github.com/symfony/recipes:master
+  - Configuring symfony/mailer (>=4.3): From github.com/symfony/recipes:master
+  - Configuring symfony/maker-bundle (>=1.0): From github.com/symfony/recipes:master
+  - Configuring doctrine/doctrine-bundle (>=2.3): From github.com/symfony/recipes:master
+  - Configuring doctrine/doctrine-migrations-bundle (>=2.2): From github.com/symfony/recipes:master
+  - Configuring symfony/security-bundle (>=4.4): From github.com/symfony/recipes:master
+  - Configuring symfony/phpunit-bridge (>=5.1): From github.com/symfony/recipes:master
+  - Configuring symfony/translation (>=3.3): From github.com/symfony/recipes:master
+  - Configuring twig/extra-bundle (>=v3.3.0): From auto-generated recipe
+  - Configuring symfony/validator (>=4.3): From github.com/symfony/recipes:master
+Executing script cache:clear [OK]
+Executing script assets:install public [OK]
+
+Some files may have been created or updated to configure your new packages.
+Please review, edit and commit them: these files are yours.
+
+Some files may have been created or updated to configure your new packages.
+Please review, edit and commit them: these files are yours.
+
+
+ What's next? 
+
+
+  * Run your application:
+    1. Go to the project directory
+    2. Create your code repository with the git init command
+    3. Download the Symfony CLI at https://symfony.com/download to install a development web server
+
+  * Read the documentation at https://symfony.com/doc
+
+
+ What's next? 
+
+
+  * You're ready to send emails.
+
+  * If you want to send emails via a supported email provider, install
+    the corresponding bridge.
+    For instance, composer require mailgun-mailer for Mailgun.
+
+  * If you want to send emails asynchronously:
+
+    1. Install the messenger component by running composer require messenger;
+    2. Add 'Symfony\Component\Mailer\Messenger\SendEmailMessage': amqp to the
+       config/packages/messenger.yaml file under framework.messenger.routing
+       and replace amqp with your transport name of choice.
+
+  * Read the documentation at https://symfony.com/doc/master/mailer.html
+
+
+ Database Configuration 
+
+
+  * Modify your DATABASE_URL config in .env
+
+  * Configure the driver (postgresql) and
+    server_version (13) in config/packages/doctrine.yaml
+
+
+ How to test? 
+
+
+  * Write test cases in the tests/ folder
+  * Run php bin/phpunit
+
+
+C:\Symfony>  

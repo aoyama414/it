@@ -1,0 +1,79 @@
+1回目
+-------------------------------------------------------------------------------
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bitSubject:
+ =?utf-8?b?44OI44OU44OD44Kv5L2c5oiQOiDjg6Hjg7zjg6vpgIHkv6Hjg4bjgrnjg4g=?=
+From: hogehoge@example.com
+To: admin@example.com
+Date: Thu, 26 Nov 2020 00:49:03 -0000
+Message-ID: <160635174385.18920.11955216482567647338@DESKTOP-BLSL2PF>
+
+以下のトピックが登録されました。
+
+---------------------
+タイトル： メール送信テスト
+ユーザー名： 伊達公男
+本文：
+メールですよ
+わかる
+-------------------------------------------------------------------------------
+
+2回目
+-------------------------------------------------------------------------------
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: =?utf-8?b?44OI44OU44OD44Kv5L2c5oiQOiAy5Zue55uu?=
+From: hogehoge@example.com
+To: admin@example.com
+Date: Thu, 26 Nov 2020 00:51:01 -0000
+Message-ID: <160635186157.18920.3384878093998797501@DESKTOP-BLSL2PF>
+
+以下のトピックが登録されました。
+
+---------------------
+タイトル： 2回目
+ユーザー名： 名無し
+本文：
+送信テスト
+---------------------
+
+青山システムズ
+
+-------------------------------------------------------------------------------
+
+3回目
+-------------------------------------------------------------------------------
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject:
+ =?utf-8?b?44OI44OU44OD44Kv5L2c5oiQOiAz5Zue55uu44Gu44Oh44O844Or6YCB5L+h44OG?=
+ =?utf-8?b?44K544OI?=
+From: hogehoge@example.com
+To: admin@example.com
+Cc: admin2@example.com
+Date: Thu, 26 Nov 2020 01:02:38 -0000
+Message-ID: <160635255843.6600.4286074713917091551@DESKTOP-BLSL2PF>
+
+以下のトピックが登録されました。
+
+---------------------
+タイトル： 3回目のメール送信テスト
+ユーザー名： 名無し
+本文：
+3回目のメールです
+
+なぜ
+
+どうして
+
+何かあった
+---------------------
+
+青山システムズ
+
+-------------------------------------------------------------------------------
+
+

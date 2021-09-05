@@ -1,0 +1,105 @@
+Excelファイルの拡張子xlsとxlsxの違い
+　Excelファイルを読み書きするPythonライブラリの違いと使い分け
+　Excelファイルのデータをもとに分析するならpandas
+　Excelファイルの書式を保ったまま編集・追記するならopenpyxl
+　xlsファイルを扱う必要があるならxlrd, xlwt
+
+
+////////////////////////
+$ pip install xlrd
+$ pip install xlwt
+
+import xlrd
+import pprint
+
+
+print(type(wb))
+# <class 'xlrd.book.Book'>
+
+print(wb.sheet_names())
+# ['sheet1', 'sheet2']
+
+sheets = wb.sheets()
+
+print(type(sheets))
+# <class 'list'>
+
+print(type(sheets[0]))
+# <class 'xlrd.sheet.Sheet'>
+
+
+sheet = wb.sheet_by_name('sheet1')
+
+print(type(sheet))
+# <class 'xlrd.sheet.Sheet'>
+
+cell = sheet.cell(1, 2)
+
+print(cell)
+# number:12.0
+
+print(type(cell))
+# <class 'xlrd.sheet.Cell'>
+
+print(cell.value)
+# 12.0
+
+col = sheet.col(1)
+
+print(col)
+# [text:'A', number:11.0, number:21.0, number:31.0]
+
+print(type(col[0]))
+# <class 'xlrd.sheet.Cell'>
+
+
+col_values = sheet.col_values(1)
+
+print(col_values)
+# ['A', 11.0, 21.0, 31.0]
+
+
+print(sheet.row_values(1))
+# ['one', 11.0, 12.0, 13.0]
+
+
+pprint.pprint([sheet.row_values(x) for x in range(4)])
+# [['', 'A', 'B', 'C'],
+#  ['one', 11.0, 12.0, 13.0],
+#  ['two', 21.0, 22.0, 23.0],
+#  ['three', 31.0, 32.0, 33.0]]
+
+///////////////////////////////////////////
+import xlwt
+from datetime import datetime
+
+style0 = xlwt.easyxf('font: name Times New Roman, color-index red, bold on',
+    num_format_str='#,##0.00')
+style1 = xlwt.easyxf(num_format_str='YY-MM-DD') #D-MMM-YY
+
+wb = xlwt.Workbook()
+ws = wb.add_sheet('A Test Sheet')
+
+ws.write(0, 0, 1234.56, style0)
+ws.write(1, 0, datetime.now(), style1)
+ws.write(2, 0, 1)
+ws.write(2, 1, 1)
+ws.write(2, 2, xlwt.Formula("A3+B3"))
+
+wb.save('./out/sample.xls')
+
+
+sheet2 = wb.add_sheet('sheet2')
+
+def write_list_1d(sheet, l, start_row, start_col):
+    for i, val in enumerate(l):
+        sheet.write(start_row, start_col + i, val)
+
+def write_list_2d(sheet, l_2d, start_row, start_col):
+    for i, l in enumerate(l_2d):
+        write_list_1d(sheet, l, start_row + i, start_col)
+
+l_2d = [['A', 'B', 'C'], [1, 2, 3]]
+write_list_2d(sheet2, l_2d, 1, 2)
+
+wb.save('./out/sample.xls')

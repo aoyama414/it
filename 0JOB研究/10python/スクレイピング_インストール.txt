@@ -1,0 +1,17 @@
+py -m pip install lxml
+py -m pip install bs4
+py -m pip install html5lib
+
+# 読み込みで必要
+py -m pip install xlrd
+ 
+# 書き込みで必要
+py -m pip install openpyxl
+
+kerasのインストール
+py -m pip install keras
+py -m pip install tensorflow
+py -m pip install tensorflow-gpu
+py -m pip install pydot
+
+py -m pip install seaborn

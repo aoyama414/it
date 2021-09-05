@@ -1,0 +1,65 @@
+Microsoft Windows [Version 10.0.18363.1082]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\y_aoy>where py
+C:\Windows\py.exe
+
+C:\Users\y_aoy>where pip
+C:\Python\Python38\Scripts\pip.exe
+
+C:\Users\y_aoy>python --version
+Python 3.8.5
+
+C:\Users\y_aoy>python
+Python 3.8.5 (tags/v3.8.5:580fbb0, Jul 20 2020, 15:57:54) [MSC v.1924 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+
+C:\Users\y_aoy>pip list
+Package    Version
+---------- -------
+pip        20.1.1
+setuptools 47.1.0
+WARNING: You are using pip version 20.1.1; however, version 20.2.3 is available.
+You should consider upgrading via the 'c:\python\python38\python.exe -m pip install --upgrade pip' command.
+
+C:\Users\y_aoy>c:\python\python38\python.exe -m pip install --upgrade pip
+Collecting pip
+  Downloading pip-20.2.3-py2.py3-none-any.whl (1.5 MB)
+     |████████████████████████████████| 1.5 MB 1.6 MB/s
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 20.1.1
+    Uninstalling pip-20.1.1:
+      Successfully uninstalled pip-20.1.1
+Successfully installed pip-20.2.3
+
+C:\Users\y_aoy>python -m pip install -U pip setuptools
+Requirement already up-to-date: pip in c:\python\python38\lib\site-packages (20.2.3)
+Collecting setuptools
+  Downloading setuptools-50.3.0-py3-none-any.whl (785 kB)
+     |████████████████████████████████| 785 kB 3.2 MB/s
+Installing collected packages: setuptools
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 47.1.0
+    Uninstalling setuptools-47.1.0:
+      Successfully uninstalled setuptools-47.1.0
+Successfully installed setuptools-50.3.0
+
+C:\Users\y_aoy>python -m pip install -U setuptools
+Requirement already up-to-date: setuptools in c:\python\python38\lib\site-packages (50.3.0)
+
+C:\Users\y_aoy>pip list
+Package    Version
+---------- -------
+pip        20.2.3
+setuptools 50.3.0
+
+C:\Users\y_aoy>python -m pip install -U numpy
+Collecting numpy
+  Downloading numpy-1.19.2-cp38-cp38-win_amd64.whl (13.0 MB)
+     |████████████████████████████████| 13.0 MB 38 kB/s
+Installing collected packages: numpy
+Successfully installed numpy-1.19.2
+
+C:\Users\y_aoy>

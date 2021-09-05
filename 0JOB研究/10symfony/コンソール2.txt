@@ -1,0 +1,10 @@
+既存のテーブルからエンティを作成
+php bin/console doctrine:mapping:import "App\Entity" annotation --path=src/Entity
+
+Getters＆SettersまたはPHPクラスの生成
+
+// generates getter/setter methods for all Entities
+ php bin/console make:entity --regenerate App
+
+// generates getter/setter methods for one specific Entity
+ php bin/console make:entity --regenerate App\\Entity\\Country

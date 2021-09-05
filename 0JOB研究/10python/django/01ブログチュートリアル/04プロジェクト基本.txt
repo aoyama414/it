@@ -1,0 +1,106 @@
+プロジェクト
+1)データベース
+Djangoではデフォルトで「sqlite3」というデータベースを使うように設定されており、settings.pyファイルの中の以下の部分で設定されています。
+	DATABASES = {
+	    'default': {
+	        'ENGINE': 'django.db.backends.sqlite3',
+	        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+	    }
+	}
+
+	(env01) C:\Python\ad-dj>python manage.py migrate
+	Operations to perform:
+	  Apply all migrations: admin, auth, contenttypes, sessions
+	Running migrations:
+	  Applying contenttypes.0001_initial... OK
+	  Applying auth.0001_initial... OK
+	  Applying admin.0001_initial... OK
+	  Applying admin.0002_logentry_remove_auto_add... OK
+	  Applying admin.0003_logentry_add_action_flag_choices... OK
+	  Applying contenttypes.0002_remove_content_type_name... OK
+	  Applying auth.0002_alter_permission_name_max_length... OK
+	  Applying auth.0003_alter_user_email_max_length... OK
+	  Applying auth.0004_alter_user_username_opts... OK
+	  Applying auth.0005_alter_user_last_login_null... OK
+	  Applying auth.0006_require_contenttypes_0002... OK
+	  Applying auth.0007_alter_validators_add_error_messages... OK
+	  Applying auth.0008_alter_user_username_max_length... OK
+	  Applying auth.0009_alter_user_last_name_max_length... OK
+	  Applying auth.0010_alter_group_name_max_length... OK
+	  Applying auth.0011_update_proxy_permissions... OK
+	  Applying auth.0012_alter_user_first_name_max_length... OK
+	  Applying sessions.0001_initial... OK
+
+
+2)プロジェクトのPythonパッケージです。
+中には４つのファイルが含まれています。
+	init.py: django_blogがPythonパッケージであることを示すための空ファイルです。こちらを変更することはありません
+	settings.py: Djangoプロジェクトの設定ファイルです。今後様々な場面で利用します。
+	urls.py: ウェブサイトの各ページのURLを設定するファイルです。
+	wsgi.py: サーバーの設定などを行うファイルです。
+
+3)アプリケーションで機能を作ろう
+プロジェクトが「ウェブサービス全体に関わる設定」をしているのに対して、アプリケーションとは「ウェブサービスに必要な機能を実現する部分」のことです。
+	管理ページから記事を投稿できる
+	トップページに、記事の一覧を投稿日時の降順で表示する
+	トップページには、各記事の冒頭１００文字のサマリーが表示される
+	記事詳細ページで記事全文を読める
+
+	アプリケーションを作るときはpython manage.py startappコマンドを使います。
+
+	プロジェクトルートディレクトリで以下のコマンドを実行してください。
+	(env01) C:\Python\ad-dj>python manage.py startapp blogs
+
+	アプリケーションを登録する
+	settings.pyファイルを開いて、blogsアプリケーションを取り込む必要があります。
+
+	INSTALLED_APPSの部分に、'blogs'を追加してください。
+
+4)Templatesでページを作ろう
+アプリケーションを登録することができたので、まず最初にシンプルなトップページをつくって表示してみましょう。ユーザーが最初に訪れるページのことです。
+
+ページを表示するときは、通常のホームページ等と同様にHTMLファイルを作成してそれを表示させるのですが、Djangoで扱うHTMLファイルは、動的なコードを扱うことができます。つまり、HTMLファイル内でPythonコードを書くことができ、変数やfor文などを扱うことができます。とっても便利ですよね！Djangoでは、これらHTMLファイルをTemplatesと呼びます。
+
+では、トップページ用に最初のテンプレートを作成しましょう。blogsディレクトリに移動して以下のようにコマンドを打ってください。
+/blogs/内に「templates」というディレクトリを作成
+今作成した「templates」ディレクトリに移動
+django_blog/blogs/templates/内にblogs/というディレクトリを作成
+
+
+
+
+
+
+
+
+
+
+
+
+
+(env01) C:\Python\ad-dj>python manage.py startapp blogs
+
+(env01) C:\Python\ad-dj>python manage.py makemigrations
+Migrations for 'blogs':
+  blogs\migrations\0001_initial.py
+    - Create model Blog
+
+(env01) C:\Python\ad-dj>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, blogs, contenttypes, sessions
+Running migrations:
+  Applying blogs.0001_initial... OK
+
+
+
+
+
+(env01) C:\Python\ad-dj>python manage.py createsuperuser
+ユーザー名 (leave blank to use 'y_aoy'): aoyama
+メールアドレス: aoyama414@gmail.com
+Password:nktucw82
+Password (again):nktucw82
+Superuser created successfully.
+
+
+
